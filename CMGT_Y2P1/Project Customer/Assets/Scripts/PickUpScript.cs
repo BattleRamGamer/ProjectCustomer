@@ -78,18 +78,39 @@ public class PickUpScript : MonoBehaviour
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+
+            //spaghettified check for swap or no swap
+            if (heldObj.Equals(heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject))
+            {
+                //resetting placable value for keeping track of placed object
+                heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject = null;
+            }
+            //resetting grabbable parameter for keeping track of thing it's placed on
+            heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = null;
         }
     }
 
     void PlaceObject(GameObject placeOnObj)
     {
+        GameObject placerIsHolding = placeOnObj.GetComponent<PlacerScript>().heldObject;
+
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = 0; //object assigned back to default layer
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null; //unparent object
         heldObj.transform.position = placeOnObj.transform.position;
-        heldObj = null; //undefine game object
 
+        placeOnObj.GetComponent<PlacerScript>().heldObject = heldObj;
+        heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = placeOnObj;
+
+        if (placerIsHolding != null)
+        {
+            PickUpObject(placerIsHolding); //swapping object
+        }
+        else
+        {
+            heldObj = null; //undefine game object
+        }
     }
 
     void MoveObject()
