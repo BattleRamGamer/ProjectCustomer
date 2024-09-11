@@ -6,6 +6,7 @@ public class PickUpScript : MonoBehaviour
 {
     public GameObject player;
     public Transform holdPos;
+    public GameObject postItPrefab;
 
     //if you copy from below this point, you are legally required to like the video
     public float throwForce = 500f; //force at which the object is thrown at
@@ -28,6 +29,12 @@ public class PickUpScript : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T) && heldObj == null)
+        {
+            PickUpObject(Instantiate(postItPrefab));
+        }
+        
+        
         if (Input.GetKeyDown(KeyCode.E)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
