@@ -9,6 +9,7 @@ public class HeadbobController : MonoBehaviour
 
     [SerializeField] private float _amplitude = 0.015f; // Amplitude of headbobbing motion
     [SerializeField] private float _frequency = 10.0f; // Frequency of headbobbing motion
+    [SerializeField] private float _resetCamSpeed = 1; // Frequency of headbobbing motion
 
     [Header("Holders")]
     [SerializeField] private Transform _camera = null; // Reference to the main camera
@@ -64,7 +65,7 @@ public class HeadbobController : MonoBehaviour
     private Vector3 FocusTarget()
     {
         Vector3 pos = new Vector3(transform.position.x, transform.position.y + _cameraHolder.localPosition.y, transform.position.z); // Calculate position slightly above player's position
-        pos += _cameraHolder.forward * 15.0f; // Offset forward by a fixed distance
+        pos += _cameraHolder.forward * 7.0f; // Offset forward by a fixed distance
         return pos; // Return the calculated target position
     }
 
@@ -73,6 +74,6 @@ public class HeadbobController : MonoBehaviour
     {
         if (_camera.localPosition == _startPos) return; // If camera is already at the start position, do nothing
 
-        _camera.localPosition = Vector3.Lerp(_camera.localPosition, _startPos, 1 * Time.deltaTime); // Smoothly move camera towards the start position
+        _camera.localPosition = Vector3.Lerp(_camera.localPosition, _startPos, _resetCamSpeed * Time.deltaTime); // Smoothly move camera towards the start position
     }
 }
