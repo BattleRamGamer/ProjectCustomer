@@ -14,17 +14,38 @@ public class NoteTextScript : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        // Stop/start typing if tab is pressed and is held in hand(placeholder)
+        if (Input.GetKeyDown(KeyCode.Tab) && !GetComponentInParent<GrabbableObjectScript>().placedOnPlacable)
+        {
+            isDone = !isDone;
+            if (isDone) PlayerMovement.GetPlayer().RestoreMoveSpeed();
+            else PlayerMovement.GetPlayer().FreezeMovement();
+            return;
+        }
+        if (GetComponentInParent<GrabbableObjectScript>().placedOnPlacable)
         {
             isDone = true;
+            PlayerMovement.GetPlayer().RestoreMoveSpeed();
         }
         if (isDone) return;
-        string input = Input.inputString;
-        //Debug.Log("input: "+input);
-        text += input;
-        //Debug.Log("text: " + text);
+
+        TypeText();
         GetComponent<TextMeshProUGUI>().text = text;
-        if (input.Equals("")) return;
-        //Debug.Log("didn't return");
+    }
+
+    void TypeText()
+    {
+        // Backspace functionality
+        if (Input.GetKeyDown(KeyCode.Backspace) && text.Length > 0)
+        {
+            text = text.Substring(0, text.Length - 1);
+            return;
+        }
+
+        // Adding the typed letters to the text
+        string input = Input.inputString;
+        if (input.Equals("")) return; // If not typing, nothing happens
+        text += input;
+
     }
 }

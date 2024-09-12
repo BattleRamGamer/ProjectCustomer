@@ -23,10 +23,32 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;  // Reference to the Rigidbody component
 
+    float storedMoveSpeed;
+
+    public static PlayerMovement GetPlayer()
+    {
+        return playerSingleton;
+    }
+    static PlayerMovement playerSingleton = null;
+
+    private void Awake()
+    {
+        if (playerSingleton == null)
+        {
+            playerSingleton = this;
+        }
+        else
+        {
+            throw new System.Exception("There can only be one PlayerMovement in a scene!");
+        }
+    }
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();  // Get the Rigidbody component attached to this GameObject
         rb.freezeRotation = true;  // Freeze rotation to prevent physics affecting the orientation
+        storedMoveSpeed = moveSpeed;
     }
 
     private void Update()
@@ -88,5 +110,24 @@ public class PlayerMovement : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * moveSpeed;  // Limit velocity magnitude
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);  // Apply limited velocity
         }
+    }
+
+    public void FreezeMovement()
+    {
+        if (moveSpeed > .5f)
+        {
+            storedMoveSpeed = moveSpeed;
+            moveSpeed = 0f;
+        }
+    }
+
+    public void RestoreMoveSpeed()
+    {
+        moveSpeed = storedMoveSpeed;
+    }
+
+    private void OnDestroy()
+    {
+        playerSingleton = null;
     }
 }

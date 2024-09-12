@@ -17,6 +17,7 @@ public class PickUpScript : MonoBehaviour
     //private bool canDrop = true; //this is needed so we don't throw/drop object when rotating the object
     private int LayerNumber; //layer index
 
+
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -24,17 +25,18 @@ public class PickUpScript : MonoBehaviour
     void Start()
     {
         LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
-
         //mouseLookScript = player.GetComponent<MouseLookScript>();
     }
     void Update()
     {
+        // Grab post-it note
         if (Input.GetKeyDown(KeyCode.T) && heldObj == null)
         {
-            PickUpObject(Instantiate(postItPrefab));
+            PlayerMovement.GetPlayer().FreezeMovement(); // Freezing player movement
+            PickUpObject(Instantiate(postItPrefab, new Vector3(0, 0, 0), GetComponent<Transform>().rotation));
         }
         
-        
+        // Place/grab object
         if (Input.GetKeyDown(KeyCode.E)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
@@ -103,10 +105,19 @@ public class PickUpScript : MonoBehaviour
 
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = 0; //object assigned back to default layer
-        heldObjRb.isKinematic = false;
+        if (heldObj.GetComponent<GrabbableObjectScript>().hasPhysics)
+        {
+            heldObjRb.isKinematic = false;
+        }
+        else
+        {   // Post-it note
+            heldObj.transform.rotation = placeOnObj.transform.rotation;
+            heldObj.transform.Rotate(90, 0, 0);
+        }
         heldObj.transform.parent = null; //unparent object
-        heldObj.transform.position = placeOnObj.transform.position;
+        heldObj.transform.position = placeOnObj.transform.position; //placing obj in the right place
 
+        //linking object with thing it's placed on and vice versa
         placeOnObj.GetComponent<PlacerScript>().heldObject = heldObj;
         heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = placeOnObj;
 
