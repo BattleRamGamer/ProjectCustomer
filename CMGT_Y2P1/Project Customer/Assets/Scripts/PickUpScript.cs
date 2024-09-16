@@ -39,40 +39,44 @@ public class PickUpScript : MonoBehaviour
         // Place/grab object
         if (Input.GetKeyDown(KeyCode.E)) //change E to whichever key you want to press to pick up
         {
-            if (heldObj == null) //if currently not holding anything
-            {
-                //perform raycast to check if player is looking at object within pickuprange
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
-                {
-                    //make sure pickup tag is attached
-                    if (hit.transform.gameObject.tag == "canPickUp")
-                    {
-                        //pass in object hit into the PickUpObject function
-                        PickUpObject(hit.transform.gameObject);
-                    }
-                }
-            }
-            else
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, ~(1 << LayerNumber)))
-                {
-                    //make sure right tag is attached
-                    if (hit.transform.gameObject.tag == "canBePlacedOn")
-                    {
-                        //pass in placement target object into the PlaceObject function
-                        PlaceObject(hit.transform.gameObject);
-                    }
-                }
-
-            }
+            ObjectInteraction();
         }
         if (heldObj != null) //if player is holding object
         {
             MoveObject(); //keep object position at holdPos
 
             //RotateObject();   ///////// do we keep object rotation?
+        }
+    }
+
+    private void ObjectInteraction()
+    {
+        RaycastHit hit;
+        if (heldObj == null) //if currently not holding anything
+        {
+            //perform raycast to check if player is looking at object within pickuprange
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+            {
+                //make sure pickup tag is attached
+                if (hit.transform.gameObject.tag == "canPickUp")
+                {
+                    //pass in object hit into the PickUpObject function
+                    PickUpObject(hit.transform.gameObject);
+                }
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, ~(1 << LayerNumber)))
+            {
+                //make sure right tag is attached
+                if (hit.transform.gameObject.tag == "canBePlacedOn")
+                {
+                    //pass in placement target object into the PlaceObject function
+                    PlaceObject(hit.transform.gameObject);
+                }
+            }
+
         }
     }
 
@@ -89,11 +93,15 @@ public class PickUpScript : MonoBehaviour
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
 
             //spaghettified check for swap or no swap
+            //if (heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>())
+            //{
+
             if (heldObj.Equals(heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject))
             {
                 //resetting placable value for keeping track of placed object
                 heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject = null;
             }
+            //}
             //resetting grabbable parameter for keeping track of thing it's placed on
             heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = null;
         }
