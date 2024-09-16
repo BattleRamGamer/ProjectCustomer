@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     // This array keeps track of which object IDs are correctly linked
     private bool[] objectIDLinks = new bool[32];
 
+    public string[] dialogues;
+
+
     public static GameManager GetMainManager()
     {
         return mainManager;
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         objectIDLinks[id] = true;
         Debug.Log("CorrectObjectIDLink");
+        DialogueSystem.GetMainDialogueSystem().HandleText(dialogues[id], 5);
 
     }
 
