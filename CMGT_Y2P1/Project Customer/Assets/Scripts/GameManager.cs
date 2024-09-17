@@ -31,7 +31,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+
+    public bool CheckIDLink(int id)
+    {
+        return objectIDLinks[id];
+    }
 
     // These are called by GrabbableObjectScript
     public void CorrectObjectIDLink(int id)

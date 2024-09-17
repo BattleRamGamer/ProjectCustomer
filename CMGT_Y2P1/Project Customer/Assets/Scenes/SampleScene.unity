@@ -13668,6 +13668,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5933039820305882828, guid: cb2e7a6d151021d4e962df93f7fa7b66, type: 3}
+      propertyPath: objectID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8982864377539086161, guid: cb2e7a6d151021d4e962df93f7fa7b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.85
@@ -23784,6 +23788,30 @@ PrefabInstance:
       propertyPath: interactionSpawnsPrefab
       value: 
       objectReference: {fileID: 1269818072942137462, guid: cb2e7a6d151021d4e962df93f7fa7b66, type: 3}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredIDLinks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredIDLinks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredIDLinks.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingObjectDialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingObjectDialogues.Array.data[0]
+      value: I need to place the blue cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingObjectDialogues.Array.data[1]
+      value: The red cube is not placed yet
+      objectReference: {fileID: 0}
     - target: {fileID: 8369116634047370509, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.37

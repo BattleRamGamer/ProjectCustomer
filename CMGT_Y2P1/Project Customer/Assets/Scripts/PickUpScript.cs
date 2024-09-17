@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PickUpScript : MonoBehaviour
 {
+    [Header("Keybinds")]
     public KeyCode GrabOrPlaceKey;
     public KeyCode PostItSummonKey;
-    
+
+    [Header("Configuration")]
     public GameObject player;
     public Transform holdPos;
     public GameObject postItPrefab;

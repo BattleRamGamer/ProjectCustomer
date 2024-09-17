@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public string interactionDialogue = "";
-    public float dialogueTimer = 2f;
+    // (see inspector) When interacted with, checks GameManager if these IDs are correct. Leave empty if not needed 
+    public int[] requiredIDLinks;
 
+    [Header("Dialogue")]
+    public float dialogueTimer = 2f;
+    public string interactionDialogue = "";
+    public string[] missingObjectDialogues;
+
+    [Header("Object Spawning")]
     public GameObject interactionSpawnsPrefab = null;
     public Transform interactionSpawnPos = null;
     public int giveObjectID = -3;
@@ -16,6 +22,22 @@ public class Interactable : MonoBehaviour
     public void Interact()
     {
         if (isInteractedWith) return;
+
+        if (requiredIDLinks.Length > 0) // Checks for any requirements
+        {
+            for (int i = 0; i < requiredIDLinks.Length; i++)
+            {
+                if (!GameManager.GetMainManager().CheckIDLink(requiredIDLinks[i])) // Checks specific requirements
+                {
+                    if (missingObjectDialogues.Length > i) // Checks if there's dialogue
+                    {
+                        DialogueSystem.GetMainDialogueSystem().HandleText(missingObjectDialogues[i], dialogueTimer);
+                    }
+                    return;
+                }
+            }
+        }
+
 
         isInteractedWith = true;
 
