@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         objectIDLinks[id] = true;
         Debug.Log("CorrectObjectIDLink");
-        DialogueSystem.GetMainDialogueSystem().HandleText(dialogues[id], 5);
+        if (dialogues.Length > id) DialogueSystem.GetMainDialogueSystem().HandleText(dialogues[id], 5);
 
     }
 

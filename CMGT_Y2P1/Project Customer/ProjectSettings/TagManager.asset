@@ -7,6 +7,7 @@ TagManager:
   - Reach
   - canPickUp
   - canBePlacedOn
+  - canBeInteractedWith
   layers:
   - Default
   - TransparentFX
