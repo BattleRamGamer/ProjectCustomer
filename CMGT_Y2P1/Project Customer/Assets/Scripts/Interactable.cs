@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public int interactableID = -4;
     // (see inspector) When interacted with, checks GameManager if these IDs are correct. Leave empty if not needed 
     public int[] requiredIDLinks;
 
@@ -38,8 +39,12 @@ public class Interactable : MonoBehaviour
             }
         }
 
-
+        // Keeping track of interaction
         isInteractedWith = true;
+        if (interactableID >= 0)
+        {
+            GameManager.GetMainManager().InteractedWithInteractable(interactableID);
+        }
 
         // If you have something to say, speak
         if (interactionDialogue != "")

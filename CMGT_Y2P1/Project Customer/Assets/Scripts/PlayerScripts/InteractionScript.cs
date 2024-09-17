@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InteractionScript : MonoBehaviour
 {
+    // Placed on PlayerCam
+
     public KeyCode interactionKey;
     public float interactRange = 5f; //how far the player can pickup the object from
 
