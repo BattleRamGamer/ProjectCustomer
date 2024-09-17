@@ -29,8 +29,22 @@ public class InteractionScript : MonoBehaviour
                 //make sure right tag is attached
                 if (hit.transform.gameObject.tag == "canBeInteractedWith")
                 {
+                    int heldObjID;
+                    if (gameObject.GetComponent<PickUpScript>())
+                    {
+                        heldObjID = gameObject.GetComponent<PickUpScript>().GetHeldObjectID();
+                    }
+                    else heldObjID = -11;
+
+                    GameObject heldObj;
+                    if (gameObject.GetComponent<PickUpScript>())
+                    {
+                        heldObj = gameObject.GetComponent<PickUpScript>().GetHeldObj();
+                    }
+                    else heldObj = null;
+
                     //pass in placement target object into the PlaceObject function
-                    hit.transform.gameObject.GetComponent<Interactable>().Interact();
+                    hit.transform.gameObject.GetComponent<Interactable>().Interact(heldObjID, heldObj);
                 }
             }
         }

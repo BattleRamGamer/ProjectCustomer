@@ -149,6 +149,23 @@ public class PickUpScript : MonoBehaviour
         heldObj.transform.position = holdPos.transform.position;
     }
 
+    public int GetHeldObjectID()
+    {
+        if (heldObj != null)
+        {
+            if (heldObj.GetComponent<GrabbableObjectScript>())
+            {
+                return heldObj.GetComponent<GrabbableObjectScript>().objectID;
+            }
+        }
+        return -10;
+    }
+
+    public GameObject GetHeldObj()
+    {
+        return heldObj;
+    }
+
     /*void RotateObject()
     {
         if (Input.GetKey(KeyCode.R))//hold R key to rotate, change this to whatever key you want

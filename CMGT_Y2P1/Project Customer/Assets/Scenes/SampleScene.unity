@@ -16371,14 +16371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdf44a2760dc8a428913f772ccfaa8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - hooray
-  - i did it
-  - wahoo
-  - 
-  - 
-  - 
-  - 
+  correctlyPlacedObjectDialogues: []
 --- !u!4 &1534268271
 Transform:
   m_ObjectHideFlags: 0
@@ -23781,8 +23774,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: destroyHeldObj
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactionDialogue
       value: Smt spawned
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredHeldObjectID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingHeldObjDialogue
+      value: I need to hold a certain object
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -23798,7 +23803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: requiredIDLinks.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: missingObjectDialogues.Array.size
@@ -23810,7 +23815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: missingObjectDialogues.Array.data[1]
-      value: The red cube is not placed yet
+      value: I need to place the blue cube
       objectReference: {fileID: 0}
     - target: {fileID: 8369116634047370509, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_LocalPosition.x

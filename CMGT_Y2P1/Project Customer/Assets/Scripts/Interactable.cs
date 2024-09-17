@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public int interactableID = -4;
+    public int interactableID = -4; // To help GameManager keep track of what's interacted with
+
     // (see inspector) When interacted with, checks GameManager if these IDs are correct. Leave empty if not needed 
     public int[] requiredIDLinks;
+    public int requiredHeldObjectID = -9;
+    public bool destroyHeldObj;
 
     [Header("Dialogue")]
     public float dialogueTimer = 2f;
     public string interactionDialogue = "";
     public string[] missingObjectDialogues;
+    public string missingHeldObjDialogue;
 
     [Header("Object Spawning")]
     public GameObject interactionSpawnsPrefab = null;
@@ -20,10 +24,11 @@ public class Interactable : MonoBehaviour
 
     private bool isInteractedWith = false;
     
-    public void Interact()
+    public void Interact(int heldObjID, GameObject heldObj)
     {
         if (isInteractedWith) return;
 
+        // Checking requirements for correctly placed objects
         if (requiredIDLinks.Length > 0) // Checks for any requirements
         {
             for (int i = 0; i < requiredIDLinks.Length; i++)
@@ -38,6 +43,18 @@ public class Interactable : MonoBehaviour
                 }
             }
         }
+
+        // Checking requirements for held obj 
+        if (requiredHeldObjectID >= 0)
+        {
+            if (requiredHeldObjectID != heldObjID)
+            {
+                DialogueSystem.GetMainDialogueSystem().HandleText(missingHeldObjDialogue, dialogueTimer);
+                return;
+            }
+            if (destroyHeldObj) Destroy(heldObj);
+        }
+
 
         // Keeping track of interaction
         isInteractedWith = true;
