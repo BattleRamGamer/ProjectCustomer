@@ -7,6 +7,8 @@ public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private TMP_Text dialogueObject;
 
+    public AudioClip dialogueSFX = null;
+    AudioSource audioPlayer;
 
     public static DialogueSystem GetMainDialogueSystem()
     {
@@ -43,6 +45,7 @@ public class DialogueSystem : MonoBehaviour
                 t.GetComponent<Dialogue>().SetUp(this);
             }
         }
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Method to handle displaying the dialogue text
@@ -54,6 +57,9 @@ public class DialogueSystem : MonoBehaviour
         // Set the dialogueObject text to the new dialogue value
         dialogueObject.text = textValue;
 
+        // Play dialogue sounds
+        PlaySound(dialogueSFX);
+
         // Schedule the StopText method to be called after the specified timer duration
         Invoke(nameof(StopText), timer);
     }
@@ -64,4 +70,20 @@ public class DialogueSystem : MonoBehaviour
         // Clear the text from the dialogueObject
         dialogueObject.text = "";
     }
+
+
+
+    private void PlaySound(AudioClip sound)
+    {
+        if (audioPlayer != null && sound != null)
+        {
+            //Debug.Log("Playing sound");
+            audioPlayer.PlayOneShot(sound);
+        }
+        else
+        {
+            Debug.Log("DialogueSystem: Cannot play sound. audioPlayer = " + (audioPlayer != null) + ", sound = " + (sound != null));
+        }
+    }
+
 }

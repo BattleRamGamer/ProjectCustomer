@@ -22,8 +22,17 @@ public class Interactable : MonoBehaviour
     public Transform interactionSpawnPos = null;
     public int giveObjectID = -3;
 
+    public AudioClip interactionSFX = null;
+    AudioSource audioPlayer;
+
     private bool isInteractedWith = false;
-    
+
+    void Start()
+    {
+        audioPlayer = GetComponent<AudioSource>();
+
+    }
+
     public void Interact(int heldObjID, GameObject heldObj)
     {
         if (isInteractedWith) return;
@@ -55,6 +64,13 @@ public class Interactable : MonoBehaviour
             if (destroyHeldObj) Destroy(heldObj);
         }
 
+        DoInteraction();
+
+    }
+
+    private void DoInteraction()
+    {
+        PlaySound();
 
         // Keeping track of interaction
         isInteractedWith = true;
@@ -78,7 +94,18 @@ public class Interactable : MonoBehaviour
                 spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
             }
         }
+    }
 
-
+    private void PlaySound()
+    {
+        if (audioPlayer != null && interactionSFX != null)
+        {
+            //Debug.Log("Playing sound");
+            audioPlayer.PlayOneShot(interactionSFX);
+        }
+        else
+        {
+            Debug.Log("Interactable: Cannot play sound. audioPlayer = " + (audioPlayer != null) + ", interactionSFX = " + (interactionSFX != null));
+        }
     }
 }
