@@ -23,12 +23,15 @@ public class InteractionScript : MonoBehaviour
     {
         if (Input.GetKeyDown(interactionKey))
         {
+            Debug.Log("Pressed button");
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
             {
+                Debug.Log("i hit something");
                 //make sure right tag is attached
                 if (hit.transform.gameObject.tag == "canBeInteractedWith")
                 {
+                    Debug.Log("it has the right tag");
                     int heldObjID;
                     if (gameObject.GetComponent<PickUpScript>())
                     {
@@ -44,8 +47,16 @@ public class InteractionScript : MonoBehaviour
                     else heldObj = null;
 
                     //pass in placement target object into the PlaceObject function
-                    hit.transform.gameObject.GetComponent<Interactable>().Interact(heldObjID, heldObj);
+                    hit.transform.gameObject.GetComponentInParent<Interactable>().Interact(heldObjID, heldObj);
                 }
+                else
+                {
+                    Debug.Log("it doesn't have the right tag");
+                }
+            }
+            else
+            {
+                Debug.Log("i didn't hit something");
             }
         }
     }
