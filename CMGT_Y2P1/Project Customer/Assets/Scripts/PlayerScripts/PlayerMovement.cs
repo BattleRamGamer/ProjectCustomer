@@ -83,11 +83,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Calculate movement direction based on orientation and input
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+    // Calculate movement direction based on orientation and input
+    moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        // Apply force to the Rigidbody in the calculated direction
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+    // Calculate the new position based on the move direction and speed
+    Vector3 newPosition = rb.position + moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;
+
+    // Move the player by setting the new position
+    rb.MovePosition(newPosition);
+    }
+
+    public float GetMovementSpeed()
+    {
+        return moveDirection.magnitude * moveSpeed; // Return calculated movement speed
     }
 
     public Vector3 GetVelocity()
