@@ -47,12 +47,13 @@ public class HeadbobController : MonoBehaviour
     // Check if player's motion is sufficient to trigger headbobbing
     private void CheckMotion()
     {
-        float speed = new Vector3(_controller.GetVelocity().x, 0, _controller.GetVelocity().z).magnitude; // Calculate player's horizontal speed
+        float speed = _controller.GetMovementSpeed(); // Get player's movement speed directly
         if (speed < _toggleSpeed) return; // If speed is below threshold, do not trigger headbobbing
         if (!_controller.IsGrounded()) return; // If player is not grounded, do not trigger headbobbing
 
         PlayMotion(FootStepMotion()); // Trigger headbobbing based on footstep motion
     }
+
 
     // Apply the calculated motion to the camera, relative to player's orientation
     private void PlayMotion(Vector3 motion)
