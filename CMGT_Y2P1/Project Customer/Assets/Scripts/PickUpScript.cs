@@ -66,6 +66,7 @@ public class PickUpScript : MonoBehaviour
                 {
                     //pass in object hit into the PickUpObject function
                     PickUpObject(hit.transform.gameObject);
+                    //PickUpObject(hit.transform.parent.gameObject);
                 }
             }
         }
@@ -77,7 +78,7 @@ public class PickUpScript : MonoBehaviour
                 if (hit.transform.gameObject.tag == "canBePlacedOn")
                 {
                     //pass in placement target object into the PlaceObject function
-                    PlaceObject(hit.transform.gameObject);
+                    PlaceObject(hit.transform.parent.gameObject);
                 }
             }
 
@@ -93,8 +94,14 @@ public class PickUpScript : MonoBehaviour
             heldObjRb.isKinematic = true;
             heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+
+            foreach (Transform child in heldObj.transform)
+            {
+                child.gameObject.layer = LayerNumber;
+            }
+
             //make sure object doesnt collide with player, it can cause weird bugs
-            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+            Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), true);
 
             //spaghettified check for swap or no swap
             //if (heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>())
@@ -115,8 +122,15 @@ public class PickUpScript : MonoBehaviour
     {
         GameObject placerIsHolding = placeOnObj.GetComponent<PlacerScript>().heldObject;
 
-        Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+        Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = 0; //object assigned back to default layer
+
+        foreach (Transform child in heldObj.transform)
+        {
+            child.gameObject.layer = 0;
+        }
+
+
         if (heldObj.GetComponent<GrabbableObjectScript>().hasPhysics)
         {
             heldObjRb.isKinematic = false;
