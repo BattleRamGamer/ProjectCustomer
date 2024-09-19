@@ -39,7 +39,7 @@ public class PickUpScript : MonoBehaviour
             PlayerMovement.GetPlayer().FreezeMovement(); // Freezing player movement
             PickUpObject(Instantiate(postItPrefab, new Vector3(0, 0, 0), GetComponent<Transform>().rotation));
         }
-        
+
         // Place/grab object
         if (Input.GetKeyDown(GrabOrPlaceKey)) //change E to whichever key you want to press to pick up
         {
@@ -104,15 +104,15 @@ public class PickUpScript : MonoBehaviour
             Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), true);
 
             //spaghettified check for swap or no swap
-            //if (heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>())
-            //{
-
-            if (heldObj.Equals(heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject))
+            if (heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable)
             {
-                //resetting placable value for keeping track of placed object
-                heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject = null;
+
+                if (heldObj.Equals(heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject))
+                {
+                    //resetting placable value for keeping track of placed object
+                    heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable.GetComponent<PlacerScript>().heldObject = null;
+                }
             }
-            //}
             //resetting grabbable parameter for keeping track of thing it's placed on
             heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = null;
         }
