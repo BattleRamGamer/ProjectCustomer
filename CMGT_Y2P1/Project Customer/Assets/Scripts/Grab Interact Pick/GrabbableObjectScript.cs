@@ -1,13 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GrabbableObjectScript : MonoBehaviour
 {
-    //public static event Action OnCorrectIDLink;
-    //public static event Action OnWrongIDLink;
-    
     public int objectID = -1;
     public bool hasPhysics = true;
 
@@ -15,12 +10,8 @@ public class GrabbableObjectScript : MonoBehaviour
     public AudioClip placeSFX = null;
     AudioSource audioPlayer;
 
-    void Start()
-    {
-        audioPlayer = GetComponent<AudioSource>();
-    }
-
     private GameObject PlacedOnPlacable = null;
+
     public GameObject placedOnPlacable
     {
         get
@@ -29,21 +20,18 @@ public class GrabbableObjectScript : MonoBehaviour
         }
         set
         {
-            // Object is given new location
             if (value != null && value.TryGetComponent(out PlacerScript script))
             {
-                // Object is placed on placable
                 PlaySound(placeSFX);
                 if (script.placerID == objectID)
                 {
-                    // Object is placed on placable with matching ID
                     isPlacedRight = true;
                 }
             }
             else
             {
-                // Object is grabbed
                 PlaySound(grabSFX);
+                FadeManager.instance.TriggerFade();  // Call FadeManager to handle the fade effect
                 isPlacedRight = false;
             }
             PlacedOnPlacable = value;
@@ -68,16 +56,20 @@ public class GrabbableObjectScript : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        audioPlayer = GetComponent<AudioSource>();
+    }
+
     private void PlaySound(AudioClip sound)
     {
         if (audioPlayer != null && sound != null)
         {
-            //Debug.Log("Playing sound");
             audioPlayer.PlayOneShot(sound);
         }
         else
         {
-            Debug.Log("GrabbableObjectScript: Cannot play sound. audioPlayer = " + (audioPlayer != null) + ", sound = " + (sound != null));
+            Debug.LogWarning("Cannot play sound. Either audioPlayer or sound is missing.");
         }
     }
 }
