@@ -78,7 +78,7 @@ public class PickUpScript : MonoBehaviour
                 if (hit.transform.gameObject.tag == "canBePlacedOn")
                 {
                     //pass in placement target object into the PlaceObject function
-                    PlaceObject(hit.transform.gameObject);
+                    PlaceObject(hit.transform.parent.gameObject);
                 }
             }
 

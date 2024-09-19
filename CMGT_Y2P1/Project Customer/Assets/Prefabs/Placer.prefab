@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088412894156440476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0.4}
   m_LocalScale: {x: 0.01, y: 1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4007519906488947265}
+  m_Father: {fileID: 1896051833663049663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7888162857636879043
 MeshFilter:
@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &8321308919980210450
+--- !u!1 &8036989789138255635
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,49 +113,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4007519906488947265}
-  - component: {fileID: 7068382908509497527}
-  - component: {fileID: 8462485829524805747}
-  - component: {fileID: 4960251057376469299}
-  - component: {fileID: 8847567981876525795}
+  - component: {fileID: 1896051833663049663}
+  - component: {fileID: 8279224356493140359}
+  - component: {fileID: 8884058827627100046}
+  - component: {fileID: 5146887476341767824}
   m_Layer: 0
-  m_Name: Placer
+  m_Name: PlacerHitbox
   m_TagString: canBePlacedOn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4007519906488947265
+--- !u!4 &1896051833663049663
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321308919980210450}
+  m_GameObject: {fileID: 8036989789138255635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.36, y: 1.12, z: -3.42}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.01, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 779171494906361789}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4007519906488947265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7068382908509497527
+--- !u!33 &8279224356493140359
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321308919980210450}
+  m_GameObject: {fileID: 8036989789138255635}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8462485829524805747
+--- !u!23 &8884058827627100046
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321308919980210450}
+  m_GameObject: {fileID: 8036989789138255635}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -191,13 +190,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4960251057376469299
+--- !u!65 &5146887476341767824
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321308919980210450}
+  m_GameObject: {fileID: 8036989789138255635}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -206,12 +205,45 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8321308919980210450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4007519906488947265}
+  - component: {fileID: 8847567981876525795}
+  m_Layer: 0
+  m_Name: Placer
+  m_TagString: canBePlacedOn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4007519906488947265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321308919980210450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1896051833663049663}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8847567981876525795
 MonoBehaviour:
   m_ObjectHideFlags: 0
