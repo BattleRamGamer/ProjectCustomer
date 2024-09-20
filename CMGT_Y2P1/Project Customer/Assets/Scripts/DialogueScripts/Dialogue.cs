@@ -11,10 +11,11 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private bool isRepetitive = false; // Is the dialogue repetitive?
     [SerializeField] private float repeatInterval = 30f; // Time after which dialogue reappears
 
-    [SerializeField] private string interactionToDisable; // Interaction that disables repetition
+    [SerializeField] private int interactionToEnable = -6; // Interaction that enables this trigger
+    [SerializeField] private int interactionToDisable; // Interaction that disables repetition
 
     // Public getter for interactionToDisable
-    public string GetInteractionToDisable()
+    public int GetInteractionToDisable()
     {
         return interactionToDisable;
     }
@@ -31,7 +32,8 @@ public class Dialogue : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the collider belongs to the player
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && 
+            (interactionToEnable < 0 || GameManager.GetMainManager().IsInteractedWith(interactionToEnable)))
         {
             // Handle the dialogue text and display duration
             dialogueSystem.HandleText(dialogue, timer);

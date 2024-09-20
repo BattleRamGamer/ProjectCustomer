@@ -3542,7 +3542,8 @@ MonoBehaviour:
   dialogue: i have to make a coffee first thing in the morning
   isRepetitive: 1
   repeatInterval: 10
-  interactionToDisable: 
+  interactionToEnable: -6
+  interactionToDisable: 1
 --- !u!65 &303578952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4187,7 +4188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1212161044}
-  fadeDuration: 3
+  fadeDuration: 2
 --- !u!4 &340411598
 Transform:
   m_ObjectHideFlags: 0
@@ -16756,6 +16757,10 @@ PrefabInstance:
       value: Easel
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: fadeToBlack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionSFX
       value: 
       objectReference: {fileID: 8300000, guid: dd51ea2c3c6c5124ba013332d90de0fc, type: 3}
@@ -19642,7 +19647,8 @@ MonoBehaviour:
   dialogue: i am in the kitchen
   isRepetitive: 0
   repeatInterval: 30
-  interactionToDisable: 
+  interactionToEnable: -6
+  interactionToDisable: 0
 --- !u!65 &1475337727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57487,6 +57493,10 @@ PrefabInstance:
     - target: {fileID: 1907409277442688797, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+      propertyPath: fadeToBlack
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3502569218168357801, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: m_Name

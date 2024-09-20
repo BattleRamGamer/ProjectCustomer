@@ -24,9 +24,14 @@ public class Interactable : MonoBehaviour
     public GameObject interactionSpawnsPrefab = null;
     public Transform interactionSpawnPos = null;
     public int giveObjectID = -3;
+    public float spawnTime = 2;
 
     public AudioClip interactionSFX = null;
     AudioSource audioPlayer;
+
+    public enum fadeToBlackState {NoFade, FadeInOut, FadeIn}
+
+    public fadeToBlackState fadeToBlack;
 
     private bool isInteractedWith = false;
 
@@ -121,6 +126,16 @@ public class Interactable : MonoBehaviour
     {
         PlaySound();
 
+        switch (fadeToBlack)
+        {
+            case fadeToBlackState.FadeInOut:
+                FadeManager.instance.TriggerFadeOutIn();  // Call FadeManager to handle the fade effect
+                break;
+            case fadeToBlackState.FadeIn:
+                FadeManager.instance.TriggerFadeOut();
+                break;
+        }
+
         // Keeping track of interaction
         isInteractedWith = true;
         if (interactableID >= 0)
@@ -134,6 +149,12 @@ public class Interactable : MonoBehaviour
             DialogueSystem.GetMainDialogueSystem().HandleText(interactionDialogue, dialogueTimer);
         }
 
+        Invoke(nameof(SpawnPrefab), spawnTime);
+    }
+
+
+    void SpawnPrefab()
+    {
         // If you have something to present, show
         if (interactionSpawnsPrefab != null)
         {
@@ -143,6 +164,8 @@ public class Interactable : MonoBehaviour
                 spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
             }
         }
+
+
     }
 
     private void PlaySound()

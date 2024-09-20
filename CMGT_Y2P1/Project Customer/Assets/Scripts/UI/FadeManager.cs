@@ -18,14 +18,24 @@ public class FadeManager : MonoBehaviour
         }
     }
 
-    public void TriggerFade()
+    public void TriggerFadeOutIn()
     {
-        StartCoroutine(HandleFade());  // Start the fade sequence
+        StartCoroutine(HandleFadeOutIn());  // Start the fade sequence
     }
 
-    private IEnumerator HandleFade()
+    private IEnumerator HandleFadeOutIn()
     {
         yield return StartCoroutine(fadeEffect.FadeOut());
         yield return StartCoroutine(fadeEffect.FadeIn());
+    }
+
+    public void TriggerFadeOut()
+    {
+        StartCoroutine(HandleFadeOut());
+    } 
+
+    private IEnumerator HandleFadeOut()
+    {
+        yield return StartCoroutine (fadeEffect.FadeOut());
     }
 }
