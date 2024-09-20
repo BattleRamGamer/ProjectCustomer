@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void InteractedWithInteractable(int id)
     {
         interactedWithInteractables[id] = true;
+        DialogueSystem.GetMainDialogueSystem().InteractionCompleted(id);
     }
 
 }

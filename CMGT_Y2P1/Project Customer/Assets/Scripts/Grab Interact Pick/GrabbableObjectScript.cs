@@ -31,7 +31,7 @@ public class GrabbableObjectScript : MonoBehaviour
             else
             {
                 PlaySound(grabSFX);
-                FadeManager.instance.TriggerFade();  // Call FadeManager to handle the fade effect
+                //FadeManager.instance.TriggerFade();  // Call FadeManager to handle the fade effect
                 isPlacedRight = false;
             }
             PlacedOnPlacable = value;

@@ -6,8 +6,10 @@ public class Interactable : MonoBehaviour
 {
     public int interactableID = -4; // To help GameManager keep track of what's interacted with
 
+    [Header("Requirements")]
     // (see inspector) When interacted with, checks GameManager if these IDs are correct. Leave empty if not needed 
     public int[] requiredIDLinks;
+    public int[] requiredInteractions;
     public int requiredHeldObjectID = -9;
     public bool destroyHeldObj;
 
@@ -15,15 +17,21 @@ public class Interactable : MonoBehaviour
     public float dialogueTimer = 2f;
     public string interactionDialogue = "";
     public string[] missingObjectDialogues;
+    public string[] missingInteractionDialogues;
     public string missingHeldObjDialogue;
 
     [Header("Object Spawning")]
     public GameObject interactionSpawnsPrefab = null;
     public Transform interactionSpawnPos = null;
     public int giveObjectID = -3;
+    public float spawnTime = 2;
 
     public AudioClip interactionSFX = null;
     AudioSource audioPlayer;
+
+    public enum fadeToBlackState {NoFade, FadeInOut, FadeIn}
+
+    public fadeToBlackState fadeToBlack;
 
     private bool isInteractedWith = false;
 
@@ -35,8 +43,43 @@ public class Interactable : MonoBehaviour
 
     public void Interact(int heldObjID, GameObject heldObj)
     {
-        if (isInteractedWith) return;
+        if (!RequirementsAreMet(heldObjID, heldObj)) return;
 
+        DoInteraction();
+
+    }
+
+    private bool RequirementsAreMet(int heldObjID, GameObject heldObj)
+    {
+        // Has this already been interacted with?
+        if (isInteractedWith) return false;
+
+        // Has the player interacted with everything yet?
+        if (!InteractionRequirementIsMet()) return false;
+
+        // Are all objects on the right place?
+        if (!IDLinkRequirementIsMet()) return false;
+
+
+
+        // Checking requirements for held obj 
+        if (requiredHeldObjectID >= 0)
+        {
+            if (requiredHeldObjectID != heldObjID)
+            {
+                DialogueSystem.GetMainDialogueSystem().HandleText(missingHeldObjDialogue, dialogueTimer);
+                return false;
+            }
+            if (destroyHeldObj) Destroy(heldObj);
+        }
+
+
+
+        return true;
+    }
+
+    private bool IDLinkRequirementIsMet()
+    {
         // Checking requirements for correctly placed objects
         if (requiredIDLinks.Length > 0) // Checks for any requirements
         {
@@ -48,29 +91,50 @@ public class Interactable : MonoBehaviour
                     {
                         DialogueSystem.GetMainDialogueSystem().HandleText(missingObjectDialogues[i], dialogueTimer);
                     }
-                    return;
+                    return false;
                 }
             }
         }
 
-        // Checking requirements for held obj 
-        if (requiredHeldObjectID >= 0)
+        return true;
+    }
+
+    private bool InteractionRequirementIsMet()
+    {
+
+        if (requiredInteractions.Length > 0) // Checks for any requirements
         {
-            if (requiredHeldObjectID != heldObjID)
+            for (int i = 0; i < requiredInteractions.Length; i++)
             {
-                DialogueSystem.GetMainDialogueSystem().HandleText(missingHeldObjDialogue, dialogueTimer);
-                return;
+                if (!GameManager.GetMainManager().IsInteractedWith(requiredInteractions[i])) // Checks specific requirements
+                {
+                    if (missingInteractionDialogues.Length > i) // Checks if there's dialogue
+                    {
+                        DialogueSystem.GetMainDialogueSystem().HandleText(missingInteractionDialogues[i], dialogueTimer);
+                    }
+                    return false;
+                }
             }
-            if (destroyHeldObj) Destroy(heldObj);
         }
 
-        DoInteraction();
 
+        return true;
     }
+
 
     private void DoInteraction()
     {
         PlaySound();
+
+        switch (fadeToBlack)
+        {
+            case fadeToBlackState.FadeInOut:
+                FadeManager.instance.TriggerFadeOutIn();  // Call FadeManager to handle the fade effect
+                break;
+            case fadeToBlackState.FadeIn:
+                FadeManager.instance.TriggerFadeOut();
+                break;
+        }
 
         // Keeping track of interaction
         isInteractedWith = true;
@@ -85,6 +149,12 @@ public class Interactable : MonoBehaviour
             DialogueSystem.GetMainDialogueSystem().HandleText(interactionDialogue, dialogueTimer);
         }
 
+        Invoke(nameof(SpawnPrefab), spawnTime);
+    }
+
+
+    void SpawnPrefab()
+    {
         // If you have something to present, show
         if (interactionSpawnsPrefab != null)
         {
@@ -94,6 +164,8 @@ public class Interactable : MonoBehaviour
                 spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
             }
         }
+
+
     }
 
     private void PlaySound()

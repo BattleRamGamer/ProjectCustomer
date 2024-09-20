@@ -68,14 +68,14 @@ public class DialogueSystem : MonoBehaviour
     }
 
     // Method to call when interaction is completed
-    public void InteractionCompleted(string interactionName)
+    public void InteractionCompleted(int interactionID)
     {
         // Find all dialogue objects that require this interaction to disable repetition
         Dialogue[] dialogues = FindObjectsOfType<Dialogue>();
 
         foreach (Dialogue dialogue in dialogues)
         {
-            if (dialogue.GetInteractionToDisable() == interactionName)
+            if (dialogue.GetInteractionToDisable() == interactionID)
             {
                 dialogue.CompleteInteraction();
             }
