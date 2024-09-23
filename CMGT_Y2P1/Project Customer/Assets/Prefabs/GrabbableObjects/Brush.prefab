@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: grabSFX
       value: 
       objectReference: {fileID: 8300000, guid: 97c7e5def01b99342b1622d9e2992d6f, type: 3}
+    - target: {fileID: 5933039820305882828, guid: cb2e7a6d151021d4e962df93f7fa7b66, type: 3}
+      propertyPath: objectID
+      value: brush
+      objectReference: {fileID: 0}
     - target: {fileID: 8982864377539086161, guid: cb2e7a6d151021d4e962df93f7fa7b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

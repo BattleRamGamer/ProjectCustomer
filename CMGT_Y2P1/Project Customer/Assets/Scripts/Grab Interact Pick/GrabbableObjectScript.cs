@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class GrabbableObjectScript : MonoBehaviour
 {
-    public int objectID = -1;
+    // Change objectID from int to string
+    public string objectID = ""; // String ID now
     public bool hasPhysics = true;
 
     public AudioClip grabSFX = null;
@@ -23,15 +24,17 @@ public class GrabbableObjectScript : MonoBehaviour
             if (value != null && value.TryGetComponent(out PlacerScript script))
             {
                 PlaySound(placeSFX);
-                if (script.placerID == objectID)
+                if (script.placerLinkIDs.Length > 0)
                 {
-                    isPlacedRight = true;
+                    for (int i = 0; i < script.placerLinkIDs.Length; i++)
+                    {
+                        if (script.placerLinkIDs[i] == objectID) isPlacedRight = true;
+                    }
                 }
             }
             else
             {
                 PlaySound(grabSFX);
-                //FadeManager.instance.TriggerFade();  // Call FadeManager to handle the fade effect
                 isPlacedRight = false;
             }
             PlacedOnPlacable = value;
@@ -49,8 +52,14 @@ public class GrabbableObjectScript : MonoBehaviour
         {
             if (value != IsPlacedRight)
             {
-                if (value) GameManager.GetMainManager().CorrectObjectIDLink(objectID);
-                else GameManager.GetMainManager().WrongObjectIDLink(objectID);
+                if (value)
+                {
+                    GameManager.GetMainManager().CorrectObjectIDLink(objectID); // Pass string objectID
+                }
+                else
+                {
+                    GameManager.GetMainManager().WrongObjectIDLink(objectID); // Pass string objectID
+                }
             }
             IsPlacedRight = value;
         }
