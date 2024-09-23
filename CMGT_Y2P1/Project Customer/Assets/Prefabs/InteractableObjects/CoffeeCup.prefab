@@ -216,12 +216,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: giveObjectID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: destroyHeldObj
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactableID
-      value: 1
+      value: coffeeCup
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactionSFX
@@ -229,11 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 73b47985a7d53ba46935629d57fbe037, type: 3}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: requiredHeldObjectID
-      value: 0
+      value: milk
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: missingHeldObjDialogue
-      value: I don't like coffee without milk
+      value: i don't like coffee without milk
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactionSpawnsPrefab

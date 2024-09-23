@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
-    public int interactableID = -4; // To help GameManager keep track of what's interacted with
+    public string interactableID = ""; // String identifier for tracking
 
     [Header("Requirements")]
-    // (see inspector) When interacted with, checks GameManager if these IDs are correct. Leave empty if not needed 
-    public int[] requiredIDLinks;
-    public int[] requiredInteractions;
-    public int requiredHeldObjectID = -9;
+    public string[] requiredIDLinks; // String array for required object links
+    public string[] requiredInteractions; // String array for required interactions
+    public string requiredHeldObjectID = ""; // String for required held object
     public bool destroyHeldObj;
 
     [Header("Dialogue")]
@@ -24,7 +23,7 @@ public class Interactable : MonoBehaviour
     [Header("Object Spawning")]
     public GameObject interactionSpawnsPrefab = null;
     public Transform interactionSpawnPos = null;
-    public int giveObjectID = -3;
+    public string giveObjectID = ""; // String for object ID
     public float spawnTime = 2;
     public bool selfDestruct;
 
@@ -42,33 +41,24 @@ public class Interactable : MonoBehaviour
     void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
-
     }
 
-    public void Interact(int heldObjID, GameObject heldObj)
+    public void Interact(string heldObjID, GameObject heldObj)
     {
         Debug.Log("i'm in interact");
         if (!RequirementsAreMet(heldObjID, heldObj)) return;
         Debug.Log("requirements are met");
         DoInteraction();
-
     }
 
-    private bool RequirementsAreMet(int heldObjID, GameObject heldObj)
+    private bool RequirementsAreMet(string heldObjID, GameObject heldObj)
     {
-        // Has this already been interacted with?
         if (isInteractedWith) return false;
-
-        // Has the player interacted with everything yet?
         if (!InteractionRequirementIsMet()) return false;
-
-        // Are all objects on the right place?
         if (!IDLinkRequirementIsMet()) return false;
 
-
-
-        // Checking requirements for held obj 
-        if (requiredHeldObjectID >= 0)
+        // Checking held object requirements
+        if (!string.IsNullOrEmpty(requiredHeldObjectID))
         {
             if (requiredHeldObjectID != heldObjID)
             {
@@ -78,21 +68,18 @@ public class Interactable : MonoBehaviour
             if (destroyHeldObj) Destroy(heldObj);
         }
 
-
-
         return true;
     }
 
     private bool IDLinkRequirementIsMet()
     {
-        // Checking requirements for correctly placed objects
-        if (requiredIDLinks.Length > 0) // Checks for any requirements
+        if (requiredIDLinks.Length > 0)
         {
             for (int i = 0; i < requiredIDLinks.Length; i++)
             {
-                if (!GameManager.GetMainManager().CheckIDLink(requiredIDLinks[i])) // Checks specific requirements
+                if (!GameManager.GetMainManager().CheckIDLink(requiredIDLinks[i])) // Using string check instead of int
                 {
-                    if (missingObjectDialogues.Length > i) // Checks if there's dialogue
+                    if (missingObjectDialogues.Length > i)
                     {
                         DialogueSystem.GetMainDialogueSystem().HandleText(missingObjectDialogues[i], dialogueTimer);
                     }
@@ -106,14 +93,13 @@ public class Interactable : MonoBehaviour
 
     private bool InteractionRequirementIsMet()
     {
-
-        if (requiredInteractions.Length > 0) // Checks for any requirements
+        if (requiredInteractions.Length > 0)
         {
             for (int i = 0; i < requiredInteractions.Length; i++)
             {
-                if (!GameManager.GetMainManager().IsInteractedWith(requiredInteractions[i])) // Checks specific requirements
+                if (!GameManager.GetMainManager().IsInteractedWith(requiredInteractions[i])) // Using string check
                 {
-                    if (missingInteractionDialogues.Length > i) // Checks if there's dialogue
+                    if (missingInteractionDialogues.Length > i)
                     {
                         DialogueSystem.GetMainDialogueSystem().HandleText(missingInteractionDialogues[i], dialogueTimer);
                     }
@@ -122,10 +108,8 @@ public class Interactable : MonoBehaviour
             }
         }
 
-
         return true;
     }
-
 
     private void DoInteraction()
     {
@@ -133,15 +117,13 @@ public class Interactable : MonoBehaviour
 
         DoFade();
 
-        // Keeping track of interaction
         isInteractedWith = true;
-        if (interactableID >= 0)
+        if (!string.IsNullOrEmpty(interactableID))
         {
-            GameManager.GetMainManager().InteractedWithInteractable(interactableID);
+            GameManager.GetMainManager().InteractedWithInteractable(interactableID); // Track by string
         }
 
-        // If you have something to say, speak
-        if (interactionDialogue != "")
+        if (!string.IsNullOrEmpty(interactionDialogue))
         {
             DialogueSystem.GetMainDialogueSystem().HandleText(interactionDialogue, dialogueTimer);
         }
@@ -179,11 +161,10 @@ public class Interactable : MonoBehaviour
 
     void SpawnPrefab()
     {
-        // If you have something to present, show
         if (interactionSpawnsPrefab != null)
         {
             GameObject spawnedObj = Instantiate(interactionSpawnsPrefab, interactionSpawnPos.position, interactionSpawnPos.rotation);
-            if (giveObjectID >= 0 && spawnedObj.GetComponent<GrabbableObjectScript>())
+            if (!string.IsNullOrEmpty(giveObjectID) && spawnedObj.GetComponent<GrabbableObjectScript>())
             {
                 spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
             }

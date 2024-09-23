@@ -1,65 +1,71 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class InteractionScript : MonoBehaviour
 {
-    // Placed on PlayerCam
-
     public KeyCode interactionKey;
-    public float interactRange = 5f; //how far the player can pickup the object from
+    public float interactRange = 5f; // How far the player can interact from
 
     private int holdLayerNr;
-    // canBeInteractedWith
-    // Start is called before the first frame update
+    private PickUpScript pickUpScript; // Cache PickUpScript
+
     void Start()
     {
         holdLayerNr = LayerMask.NameToLayer("holdLayer");
+        pickUpScript = GetComponent<PickUpScript>(); // Cache this once
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(interactionKey))
         {
-            Debug.Log("Pressed button");
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
-            {
-                Debug.Log("i hit something");
-                //make sure right tag is attached
-                if (hit.transform.gameObject.tag == "canBeInteractedWith")
-                {
-                    Debug.Log("it has the right tag");
-                    int heldObjID;
-                    if (gameObject.GetComponent<PickUpScript>())
-                    {
-                        heldObjID = gameObject.GetComponent<PickUpScript>().GetHeldObjectID();
-                    }
-                    else heldObjID = -11;
+            Debug.Log("Pressed interaction key");
+            TryInteract();
+        }
+    }
 
-                    GameObject heldObj;
-                    if (gameObject.GetComponent<PickUpScript>())
-                    {
-                        heldObj = gameObject.GetComponent<PickUpScript>().GetHeldObj();
-                    }
-                    else heldObj = null;
+    void TryInteract()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
+        {
+            Debug.Log("Raycast hit something");
 
-                    //pass in placement target object into the PlaceObject function
-                    Debug.Log("About to do the thing");
-                    hit.transform.gameObject.GetComponentInParent<Interactable>().Interact(heldObjID, heldObj);
-                    Debug.Log("Did the thing?");
-                }
-                else
-                {
-                    Debug.Log("it doesn't have the right tag");
-                }
-            }
-            else
-            {
-                Debug.Log("i didn't hit something");
-            }
+            TryInteract(hit); // Separate method for tag and interaction check
+        }
+        else
+        {
+            Debug.Log("Raycast didn't hit anything");
+        }
+    }
+
+    void TryInteract(RaycastHit hit)
+    {
+        if (hit.transform.gameObject.tag == "canBeInteractedWith")
+        {
+            Debug.Log("Hit object has the right tag");
+            InteractWithObject(hit);
+        }
+        else
+        {
+            Debug.Log("Hit object does not have the right tag");
+        }
+    }
+
+    void InteractWithObject(RaycastHit hit)
+    {
+        string heldObjID = pickUpScript != null ? pickUpScript.GetHeldObjectID() : "";
+        GameObject heldObj = pickUpScript != null ? pickUpScript.GetHeldObj() : null;
+
+        Interactable interactable = hit.transform.gameObject.GetComponentInParent<Interactable>();
+        if (interactable != null)
+        {
+            interactable.Interact(heldObjID, heldObj);
+            Debug.Log($"Interacted with object: {hit.transform.gameObject.name} at position {hit.point}");
+        }
+        else
+        {
+            Debug.LogWarning("Hit object lacks Interactable component");
         }
     }
 }

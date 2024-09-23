@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // This array keeps track of which object IDs are correctly linked
-    private bool[] objectIDLinks = new bool[32];
-    private bool[] interactedWithInteractables = new bool[32];
+    // Dictionaries to track object links and interactions by string ID
+    private Dictionary<string, bool> objectIDLinks = new Dictionary<string, bool>();
+    private Dictionary<string, bool> interactedWithInteractables = new Dictionary<string, bool>();
 
-    public string[] correctlyPlacedObjectDialogues;
-
+    public Dictionary<string, string> correctlyPlacedObjectDialogues = new Dictionary<string, string>();
 
     public static GameManager GetMainManager()
     {
@@ -24,7 +23,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             mainManager = this;
 
-            // subscribe to events here
+            // subscribe to events here if needed
         }
         else
         {
@@ -33,35 +32,67 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public bool CheckIDLink(int id)
+    public bool CheckIDLink(string id)
     {
-        return objectIDLinks[id];
-    }
-    public bool IsInteractedWith(int id)
-    {
-        return interactedWithInteractables[id];
+        // If the ID doesn't exist in the dictionary, return false
+        if (objectIDLinks.ContainsKey(id))
+            return objectIDLinks[id];
+        return false;
     }
 
-    // These are called by GrabbableObjectScript
-    public void CorrectObjectIDLink(int id)
+    public bool IsInteractedWith(string id)
     {
-        objectIDLinks[id] = true;
+        // If the ID doesn't exist in the dictionary, return false
+        if (interactedWithInteractables.ContainsKey(id))
+            return interactedWithInteractables[id];
+        return false;
+    }
+
+    // Called by GrabbableObjectScript or Interactable
+    public void CorrectObjectIDLink(string id)
+    {
+        if (!objectIDLinks.ContainsKey(id))
+        {
+            objectIDLinks.Add(id, true);
+        }
+        else
+        {
+            objectIDLinks[id] = true;
+        }
+
         Debug.Log("CorrectObjectIDLink");
-        if (correctlyPlacedObjectDialogues.Length > id) DialogueSystem.GetMainDialogueSystem().HandleText(correctlyPlacedObjectDialogues[id], 5);
 
+        if (correctlyPlacedObjectDialogues.ContainsKey(id))
+        {
+            DialogueSystem.GetMainDialogueSystem().HandleText(correctlyPlacedObjectDialogues[id], 5);
+        }
     }
 
-    public void WrongObjectIDLink(int id)
+    public void WrongObjectIDLink(string id)
     {
-        objectIDLinks[id] = false;
+        if (!objectIDLinks.ContainsKey(id))
+        {
+            objectIDLinks.Add(id, false);
+        }
+        else
+        {
+            objectIDLinks[id] = false;
+        }
+
         Debug.Log("WrongObjectIDLink");
     }
 
-    public void InteractedWithInteractable(int id)
+    public void InteractedWithInteractable(string id)
     {
-        interactedWithInteractables[id] = true;
+        if (!interactedWithInteractables.ContainsKey(id))
+        {
+            interactedWithInteractables.Add(id, true);
+        }
+        else
+        {
+            interactedWithInteractables[id] = true;
+        }
+
         DialogueSystem.GetMainDialogueSystem().InteractionCompleted(id);
     }
-
 }
