@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -25,13 +26,16 @@ public class Interactable : MonoBehaviour
     public Transform interactionSpawnPos = null;
     public int giveObjectID = -3;
     public float spawnTime = 2;
+    public bool selfDestruct;
 
+    [Header("Misc")]
     public AudioClip interactionSFX = null;
     AudioSource audioPlayer;
 
     public enum fadeToBlackState {NoFade, FadeInOut, FadeIn}
-
     public fadeToBlackState fadeToBlack;
+
+    public string switchToScene = "";
 
     private bool isInteractedWith = false;
 
@@ -43,8 +47,9 @@ public class Interactable : MonoBehaviour
 
     public void Interact(int heldObjID, GameObject heldObj)
     {
+        Debug.Log("i'm in interact");
         if (!RequirementsAreMet(heldObjID, heldObj)) return;
-
+        Debug.Log("requirements are met");
         DoInteraction();
 
     }
@@ -126,15 +131,7 @@ public class Interactable : MonoBehaviour
     {
         PlaySound();
 
-        switch (fadeToBlack)
-        {
-            case fadeToBlackState.FadeInOut:
-                FadeManager.instance.TriggerFadeOutIn();  // Call FadeManager to handle the fade effect
-                break;
-            case fadeToBlackState.FadeIn:
-                FadeManager.instance.TriggerFadeOut();
-                break;
-        }
+        DoFade();
 
         // Keeping track of interaction
         isInteractedWith = true;
@@ -150,22 +147,8 @@ public class Interactable : MonoBehaviour
         }
 
         Invoke(nameof(SpawnPrefab), spawnTime);
-    }
 
-
-    void SpawnPrefab()
-    {
-        // If you have something to present, show
-        if (interactionSpawnsPrefab != null)
-        {
-            GameObject spawnedObj = Instantiate(interactionSpawnsPrefab, interactionSpawnPos.position, interactionSpawnPos.rotation);
-            if (giveObjectID >= 0 && spawnedObj.GetComponent<GrabbableObjectScript>())
-            {
-                spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
-            }
-        }
-
-
+        if (switchToScene != "") Invoke(nameof(LoadScene), spawnTime);
     }
 
     private void PlaySound()
@@ -179,5 +162,38 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Interactable: Cannot play sound. audioPlayer = " + (audioPlayer != null) + ", interactionSFX = " + (interactionSFX != null));
         }
+    }
+
+    private void DoFade()
+    {
+        switch (fadeToBlack)
+        {
+            case fadeToBlackState.FadeInOut:
+                FadeManager.instance.TriggerFadeOutIn();  // Call FadeManager to handle the fade effect
+                break;
+            case fadeToBlackState.FadeIn:
+                FadeManager.instance.TriggerFadeOut();
+                break;
+        }
+    }
+
+    void SpawnPrefab()
+    {
+        // If you have something to present, show
+        if (interactionSpawnsPrefab != null)
+        {
+            GameObject spawnedObj = Instantiate(interactionSpawnsPrefab, interactionSpawnPos.position, interactionSpawnPos.rotation);
+            if (giveObjectID >= 0 && spawnedObj.GetComponent<GrabbableObjectScript>())
+            {
+                spawnedObj.GetComponent<GrabbableObjectScript>().objectID = giveObjectID;
+            }
+        }
+
+        if (selfDestruct) gameObject.SetActive(false);
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(switchToScene);
     }
 }

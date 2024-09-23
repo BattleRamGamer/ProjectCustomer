@@ -12908,6 +12908,18 @@ PrefabInstance:
       propertyPath: placerID
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13242,6 +13254,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[0]
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16530,6 +16550,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[1]
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -56697,8 +56729,16 @@ PrefabInstance:
       value: canBeInteractedWith
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: fadeToBlack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: giveObjectID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: switchToScene
+      value: SampleScene
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: destroyHeldObj
@@ -83391,6 +83431,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+      propertyPath: placerLinkIDs.Array.data[0]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
