@@ -4993,7 +4993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: requiredInteractions.Array.data[0]
-      value: coffeeCup
+      value: coffeeCupMilk
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: missingInteractionDialogues.Array.size
@@ -12922,11 +12922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[0]
-      value: 4
+      value: brush
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[1]
-      value: 5
+      value: palette
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16558,7 +16558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerID
-      value: palette
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.size
@@ -16566,11 +16566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[0]
-      value: 4
+      value: brush
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[1]
-      value: 5
+      value: palette
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16826,11 +16826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: requiredIDLinks.Array.data[0]
-      value: palette
+      value: brush
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: requiredIDLinks.Array.data[1]
-      value: brush
+      value: palette
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: requiredInteractions.Array.size
@@ -19700,7 +19700,7 @@ MonoBehaviour:
   isRepetitive: 1
   repeatInterval: 30
   interactionToEnableTHIS: 
-  interactionToDisableTHIS: coffeeCup
+  interactionToDisableTHIS: coffeCup
 --- !u!65 &1475337727
 BoxCollider:
   m_ObjectHideFlags: 0
