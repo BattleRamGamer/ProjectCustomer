@@ -99,6 +99,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: RecordPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: giveObjectID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: interactableID
+      value: recordPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredHeldObjectID
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

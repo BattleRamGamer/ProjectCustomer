@@ -256,5 +256,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad59eedb9a16be44b68e7b3d688ddd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placerID: -2
+  placerID: 
   heldObject: {fileID: 0}

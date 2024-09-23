@@ -68,7 +68,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     // Method to call when interaction is completed
-    public void InteractionCompleted(int interactionID)
+    public void InteractionCompleted(string interactionID)
     {
         // Find all dialogue objects that require this interaction to disable repetition
         Dialogue[] dialogues = FindObjectsOfType<Dialogue>();
