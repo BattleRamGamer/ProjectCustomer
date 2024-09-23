@@ -23,9 +23,12 @@ public class GrabbableObjectScript : MonoBehaviour
             if (value != null && value.TryGetComponent(out PlacerScript script))
             {
                 PlaySound(placeSFX);
-                if (script.placerID == objectID)
+                if (script.placerLinkIDs.Length > 0)
                 {
-                    isPlacedRight = true;
+                    for (int i = 0; i < script.placerLinkIDs.Length; i++)
+                    {
+                        if (script.placerLinkIDs[i] == objectID) isPlacedRight = true;
+                    }
                 }
             }
             else

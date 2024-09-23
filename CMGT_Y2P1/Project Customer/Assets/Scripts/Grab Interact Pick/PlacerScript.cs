@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlacerScript : MonoBehaviour
 {
-    public int placerID = -2; 
-    
+    public int[] placerLinkIDs;
+
     public GameObject heldObject = null;
     
     

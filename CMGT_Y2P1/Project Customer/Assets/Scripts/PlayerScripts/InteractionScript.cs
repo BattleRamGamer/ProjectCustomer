@@ -47,7 +47,9 @@ public class InteractionScript : MonoBehaviour
                     else heldObj = null;
 
                     //pass in placement target object into the PlaceObject function
+                    Debug.Log("About to do the thing");
                     hit.transform.gameObject.GetComponentInParent<Interactable>().Interact(heldObjID, heldObj);
+                    Debug.Log("Did the thing?");
                 }
                 else
                 {
