@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2ce593b70f989488510b12deb4d279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrabOrPlaceKey: 101
-  PostItSummonKey: 116
+  GrabOrPlaceKey: 323
+  PostItSummonKey: 112
   player: {fileID: 1305581347606618042}
   holdPos: {fileID: 8985498608631128865}
   postItPrefab: {fileID: 5375620939306458045, guid: 118ad223fee3d7d4b95c7c1b18a816c6, type: 3}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe711b8573279304b85de5f5d89cbc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionKey: 103
+  interactionKey: 101
   interactRange: 5
 --- !u!114 &5757695415131710214
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

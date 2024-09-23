@@ -153,17 +153,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableID: -4
-  requiredIDLinks: 
-  requiredHeldObjectID: -9
+  requiredIDLinks: []
+  requiredInteractions: []
+  requiredHeldObjectID: 
   destroyHeldObj: 0
-  dialogueTimer: 2
+  dialogueTimer: 5
   interactionDialogue: 
   missingObjectDialogues: []
+  missingInteractionDialogues: []
   missingHeldObjDialogue: 
   interactionSpawnsPrefab: {fileID: 0}
   interactionSpawnPos: {fileID: 8369116634047370509}
-  giveObjectID: -3
+  giveObjectID: 
+  spawnTime: 2
+  selfDestruct: 0
   interactionSFX: {fileID: 0}
+  fadeToBlack: 0
+  switchToScene: 
 --- !u!82 &2066099429963820170
 AudioSource:
   m_ObjectHideFlags: 0
