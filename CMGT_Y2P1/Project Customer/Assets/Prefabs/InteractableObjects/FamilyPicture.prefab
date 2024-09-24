@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: missingInteractionDialogues.Array.data[0]
-      value: I can't think clearly without a coffee.
+      value: I can't think clearly without a coffee
       objectReference: {fileID: 0}
     - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_LocalPosition.x

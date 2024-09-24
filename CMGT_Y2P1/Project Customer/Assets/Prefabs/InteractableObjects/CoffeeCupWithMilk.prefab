@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 560d4eba840aec648b120a09af6e3583, type: 3}
     - target: {fileID: 201263768214293285, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
       propertyPath: interactionDialogue
-      value: now I can start my day, I should look for inspiration to paint
+      value: delicious, now I need to find some inspiration for my new painting
       objectReference: {fileID: 0}
     - target: {fileID: 201263768214293285, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
       propertyPath: requiredHeldObjectID

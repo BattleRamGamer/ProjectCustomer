@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8133411495630893589
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 201263768214293285, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: interactableID
+      value: coffeeCup S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 201263768214293285, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: interactionSpawnsPrefab
+      value: 
+      objectReference: {fileID: 4398359762983330689, guid: 39c786b4252fba94dae36f39762d8397, type: 3}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 325184654488483861, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341832810159979681, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
+      propertyPath: m_Name
+      value: CoffeeCup S2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23662e2dc45084f45aae7e02b7d0b13b, type: 3}
