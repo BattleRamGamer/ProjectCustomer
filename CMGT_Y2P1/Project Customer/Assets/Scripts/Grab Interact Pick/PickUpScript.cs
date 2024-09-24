@@ -9,6 +9,8 @@ public class PickUpScript : MonoBehaviour
     public KeyCode PostItSummonKey;
 
     [Header("Configuration")]
+    public bool enablePostItNotes = false;
+    public int postItNoteLimit = 5;
     public GameObject player;
     public Transform holdPos;
     public GameObject postItPrefab;
@@ -17,6 +19,7 @@ public class PickUpScript : MonoBehaviour
     private GameObject heldObj; // object which we pick up
     private Rigidbody heldObjRb; // Rigidbody of object we pick up
     private int LayerNumber; // layer index
+    private int postItNoteCount = 0; // keeping track of the number of post it notes
 
     void Start()
     {
@@ -26,10 +29,12 @@ public class PickUpScript : MonoBehaviour
     void Update()
     {
         // Grab post-it note
-        if (Input.GetKeyDown(PostItSummonKey) && heldObj == null)
+        if (Input.GetKeyDown(PostItSummonKey) && heldObj == null 
+            && enablePostItNotes && (postItNoteCount < postItNoteLimit))
         {
             PlayerMovement.GetPlayer().FreezeMovement(); // Freezing player movement
             PickUpObject(Instantiate(postItPrefab, new Vector3(0, 0, 0), GetComponent<Transform>().rotation));
+            postItNoteCount++;
         }
 
         // Place/grab object
