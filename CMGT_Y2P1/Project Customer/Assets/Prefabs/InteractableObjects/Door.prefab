@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6415351315128494134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6688422144029057572, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: fadeToBlack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: switchToScene
+      value: Stage 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: interactableID
+      value: door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: interactionDialogue
+      value: time to leave
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredInteractions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredInteractions.Array.data[0]
+      value: easel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredInteractions.Array.data[1]
+      value: brush
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: requiredInteractions.Array.data[2]
+      value: palette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingInteractionDialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[0]
+      value: i need to take a better look at the easel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[1]
+      value: i need to take a better look at the brush
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[2]
+      value: i need to take a better look at the palette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529266953769171114, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.70735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529266953769171114, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.529282
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529266953769171114, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529266953769171114, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3537
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529266953769171114, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2769
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
