@@ -8,6 +8,7 @@ TagManager:
   - canPickUp
   - canBePlacedOn
   - canBeInteractedWith
+  - IsPostItNotePlacement
   layers:
   - Default
   - TransparentFX

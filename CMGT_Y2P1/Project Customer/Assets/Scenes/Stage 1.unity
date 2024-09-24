@@ -1648,6 +1648,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdf44a2760dc8a428913f772ccfaa8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objsWithPostItNote:
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!4 &1534268271
 Transform:
   m_ObjectHideFlags: 0

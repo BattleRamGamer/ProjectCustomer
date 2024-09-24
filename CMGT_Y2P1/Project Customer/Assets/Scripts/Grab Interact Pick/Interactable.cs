@@ -175,6 +175,7 @@ public class Interactable : MonoBehaviour
 
     private void LoadScene()
     {
-        SceneManager.LoadScene(switchToScene);
+        GameManager.GetMainManager().LoadScene(switchToScene);
+        //SceneManager.LoadScene(switchToScene);
     }
 }

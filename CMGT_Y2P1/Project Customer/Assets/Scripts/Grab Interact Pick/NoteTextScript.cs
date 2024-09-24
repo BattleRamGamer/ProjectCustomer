@@ -15,14 +15,17 @@ public class NoteTextScript : MonoBehaviour
     void Update()
     {
         // Stop/start typing if tab is pressed and is held in hand(placeholder)
-        if (Input.GetKeyDown(KeyCode.Tab) && !GetComponentInParent<GrabbableObjectScript>().placedOnPlacable)
+        if (Input.GetKeyDown(KeyCode.Tab) && 
+            (/*!GetComponentInParent<GrabbableObjectScript>().placedOnPlacable ||*/
+            transform.parent.parent.parent.parent.tag != "IsPostItNotePlacement"))
         {
             isDone = !isDone;
             if (isDone) PlayerMovement.GetPlayer().RestoreMoveSpeed();
             else PlayerMovement.GetPlayer().FreezeMovement();
             return;
         }
-        if (GetComponentInParent<GrabbableObjectScript>().placedOnPlacable)
+        if (/*GetComponentInParent<GrabbableObjectScript>().placedOnPlacable*/
+            transform.parent.parent.parent.parent.tag == "IsPostItNotePlacement")
         {
             isDone = true;
             PlayerMovement.GetPlayer().RestoreMoveSpeed();

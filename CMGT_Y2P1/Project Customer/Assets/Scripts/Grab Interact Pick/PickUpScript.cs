@@ -63,6 +63,31 @@ public class PickUpScript : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, ~(1 << LayerNumber)))
             {
+                Debug.Log("held obj has NoteTextScript: " + (heldObj.GetComponentInChildren<NoteTextScript>() != null));
+
+                if (heldObj.GetComponentInChildren<NoteTextScript>() != null)
+                {
+                    if (hit.transform.gameObject.tag == "canPickUp" ||
+                        hit.transform.gameObject.tag == "canBeInteractedWith")
+                    {
+                        Debug.Log("it has the tag");
+
+                        GameObject placeTarget = null;
+
+                        if (hit.transform.gameObject.GetComponent<GrabbableObjectScript>() != null)
+                        {
+                            placeTarget = hit.transform.gameObject;
+                        }
+                        else
+                        {
+                            placeTarget = hit.transform.parent.gameObject;
+                        }
+
+                        PlacePostItNote(placeTarget);
+                    }
+
+                }
+
                 // make sure right tag is attached
                 if (hit.transform.gameObject.tag == "canBePlacedOn")
                 {
@@ -143,6 +168,73 @@ public class PickUpScript : MonoBehaviour
             heldObj = null; // undefine game object
         }
     }
+
+
+    void PlacePostItNote(GameObject placeTarget)
+    {
+        Debug.Log("Calling PlacePostItNote");
+        Transform placeLocation = null;
+        foreach (Transform child in placeTarget.transform)
+        {
+            Debug.Log("In the foreach loop");
+            if (child.tag == "IsPostItNotePlacement")
+            {
+                Debug.Log("Found the child");
+                placeLocation = child; 
+                break;
+            }
+        }
+
+
+        Debug.Log("Continue the process");
+
+        // Not working if there's already a note placed
+        if (placeLocation == null || placeLocation.childCount > 0) return;
+        //GameObject placerIsHolding = placeOnObj.GetComponent<PlacerScript>().heldObject;
+
+        Debug.Log("I can be placed");
+
+        Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), false);
+        heldObj.layer = 0; // object assigned back to default layer
+
+        foreach (Transform child in heldObj.transform)
+        {
+            child.gameObject.layer = 0;
+        }
+
+        if (!heldObj.GetComponent<GrabbableObjectScript>().hasPhysics)
+        {
+            // Post-it note
+            heldObj.transform.rotation = placeLocation.rotation;
+            heldObj.transform.Rotate(90, 0, 0);
+        }
+
+        heldObj.transform.parent = placeLocation; // parent object
+        heldObj.transform.position = placeLocation.position; // placing object in the right place
+
+        //heldObj.transform.parent = null; // unparent object
+        //heldObj.transform.position = placeLocation.position; // placing object in the right place
+
+        heldObj = null;
+
+        /*
+        // linking object with the thing it's placed on and vice versa
+        placeOnObj.GetComponent<PlacerScript>().heldObject = heldObj;
+        heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = placeOnObj;
+
+        if (placerIsHolding != null)
+        {
+            PickUpObject(placerIsHolding); // swapping object
+        }
+        else
+        {
+            heldObj = null; // undefine game object
+        }
+        */
+
+    }
+
+
 
     void MoveObject()
     {
