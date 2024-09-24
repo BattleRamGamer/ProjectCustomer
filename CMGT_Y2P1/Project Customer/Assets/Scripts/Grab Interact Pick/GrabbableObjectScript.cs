@@ -7,6 +7,10 @@ public class GrabbableObjectScript : MonoBehaviour
     public string objectID = ""; // String ID now
     public bool hasPhysics = true;
 
+    public string grabDialogue = "";
+    public float dialogueTime = 5f;
+    bool dialogueHasPlayed;
+
     public AudioClip grabSFX = null;
     public AudioClip placeSFX = null;
     AudioSource audioPlayer;
@@ -36,6 +40,11 @@ public class GrabbableObjectScript : MonoBehaviour
             {
                 PlaySound(grabSFX);
                 isPlacedRight = false;
+                if (!dialogueHasPlayed && grabDialogue != "")
+                {
+                    DialogueSystem.GetMainDialogueSystem().HandleText(grabDialogue, dialogueTime);
+                    dialogueHasPlayed = true;
+                }
             }
             PlacedOnPlacable = value;
         }

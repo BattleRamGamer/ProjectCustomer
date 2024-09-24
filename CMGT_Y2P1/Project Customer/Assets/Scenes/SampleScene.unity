@@ -8112,7 +8112,8 @@ MonoBehaviour:
   dialogue: i have to make a coffee first thing in the morning
   isRepetitive: 1
   repeatInterval: 10
-  interactionToDisable: 
+  interactionToEnableTHIS: 
+  interactionToDisableTHIS: 
 --- !u!65 &822689786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11194,6 +11195,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135019067}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1148260245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6269976379166136338, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: objID
+      value: inspiration
+      objectReference: {fileID: 0}
+    - target: {fileID: -6269976379166136338, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: normalObj
+      value: 
+      objectReference: {fileID: 8358798076478999970, guid: 04247ec4068e1ca45adb04cc70df87ce, type: 3}
+    - target: {fileID: -6269976379166136338, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: distortedObj
+      value: 
+      objectReference: {fileID: 8709247746939869389, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56330852373295913, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 826820852382596469, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 826820852382596469, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.835
+      objectReference: {fileID: 0}
+    - target: {fileID: 826820852382596469, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617862127143291109, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617862127143291109, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.217
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617862127143291109, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359097456184423369, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
+      propertyPath: m_Name
+      value: PhaseFourObjPlacer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 414f12a0b804866428112a9b53f5af7f, type: 3}
 --- !u!1 &1149622953
 GameObject:
   m_ObjectHideFlags: 0
@@ -14930,7 +15024,8 @@ MonoBehaviour:
   dialogue: i am in the kitchen
   isRepetitive: 0
   repeatInterval: 30
-  interactionToDisable: 
+  interactionToEnableTHIS: 
+  interactionToDisableTHIS: 
 --- !u!65 &1475337727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15397,7 +15492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdf44a2760dc8a428913f772ccfaa8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctlyPlacedObjectDialogues: []
+  objsWithPostItNote: []
 --- !u!4 &1534268271
 Transform:
   m_ObjectHideFlags: 0
@@ -22956,3 +23051,4 @@ SceneRoots:
   - {fileID: 1515150705}
   - {fileID: 1268951212}
   - {fileID: 626769755}
+  - {fileID: 1148260245}
