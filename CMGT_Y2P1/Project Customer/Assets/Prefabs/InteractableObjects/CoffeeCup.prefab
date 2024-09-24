@@ -199,6 +199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2066099429963820170, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3627149701260833127, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -212,12 +216,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: selfDestruct
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: giveObjectID
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: selfDestruct
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: destroyHeldObj
@@ -232,12 +236,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 73b47985a7d53ba46935629d57fbe037, type: 3}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
+      propertyPath: interactionDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: requiredHeldObjectID
       value: milk
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: missingHeldObjDialogue
-      value: i don't like coffee without milk
+      value: huh, where did I put the milk?
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactionSpawnsPrefab

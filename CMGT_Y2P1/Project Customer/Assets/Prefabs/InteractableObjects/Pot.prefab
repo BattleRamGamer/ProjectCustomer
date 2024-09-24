@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1819924889039772162
+--- !u!1001 &1352081829233912659
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,31 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6688422144029057572, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_Name
-      value: FamilyPicture
+      value: Pot
       objectReference: {fileID: 0}
     - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: interactableID
-      value: inspiration
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: interactionDialogue
-      value: I love my family. Time to paint!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: requiredInteractions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: requiredInteractions.Array.data[0]
-      value: coffeeCupMilk
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: missingInteractionDialogues.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8104676028400539040, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
-      propertyPath: missingInteractionDialogues.Array.data[0]
-      value: I can't think clearly without a coffee
+      value: pot
       objectReference: {fileID: 0}
     - target: {fileID: 8516823685549549200, guid: 25923c0cb31d77847b682e3a0a317f7e, type: 3}
       propertyPath: m_LocalPosition.x
