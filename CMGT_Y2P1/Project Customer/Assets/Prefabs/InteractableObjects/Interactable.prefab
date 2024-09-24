@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57af941ab0f12b442bd4dbe709744228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableID: -4
+  interactableID: 
   requiredIDLinks: []
   requiredInteractions: []
   requiredHeldObjectID: 
