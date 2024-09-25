@@ -111,11 +111,9 @@ public class PickUpScript : MonoBehaviour
             heldObjRb.isKinematic = true;
             heldObjRb.transform.parent = holdPos.transform; // parent object to hold position
             heldObj.layer = LayerNumber; // change the object layer to the holdLayer
+            heldObj.GetComponentInChildren<Collider>().isTrigger = true;
 
-            foreach (Transform child in heldObj.transform)
-            {
-                child.gameObject.layer = LayerNumber;
-            }
+            SetGameLayerRecursive(heldObj, LayerNumber);
 
             // make sure object doesn't collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), true);
@@ -142,10 +140,9 @@ public class PickUpScript : MonoBehaviour
         Physics.IgnoreCollision(heldObj.GetComponentInChildren<Collider>(), player.GetComponent<Collider>(), false);
         heldObj.layer = 0; // object assigned back to default layer
 
-        foreach (Transform child in heldObj.transform)
-        {
-            child.gameObject.layer = 0;
-        }
+        SetGameLayerRecursive(heldObj, 0);
+
+        heldObj.GetComponentInChildren<Collider>().isTrigger = false;
 
         if (heldObj.GetComponent<GrabbableObjectScript>().hasPhysics)
         {
@@ -159,7 +156,6 @@ public class PickUpScript : MonoBehaviour
         }
         heldObj.transform.parent = null; // unparent object
         heldObj.transform.position = placeOnObj.transform.position; // placing object in the right place
-
         // linking object with the thing it's placed on and vice versa
         placeOnObj.GetComponent<PlacerScript>().heldObject = heldObj;
         heldObj.GetComponent<GrabbableObjectScript>().placedOnPlacable = placeOnObj;
@@ -239,7 +235,14 @@ public class PickUpScript : MonoBehaviour
 
     }
 
-
+    private void SetGameLayerRecursive(GameObject gameObject, int layer)
+    {
+        gameObject.layer = layer;
+        foreach (Transform child in gameObject.transform)
+        {
+            SetGameLayerRecursive(child.gameObject, layer);
+        }
+    }
 
     void MoveObject()
     {
