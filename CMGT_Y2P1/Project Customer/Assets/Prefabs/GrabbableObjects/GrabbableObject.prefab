@@ -108,7 +108,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectID: -1
   hasPhysics: 1
-  grabSFX: {fileID: 0}
+  grabDialogue: 
+  dialogueTime: 5
+  grabSFX:
+  - {fileID: 8300000, guid: 2dadbbdee249a944d920228df001395f, type: 3}
+  - {fileID: 8300000, guid: 97c7e5def01b99342b1622d9e2992d6f, type: 3}
+  - {fileID: 8300000, guid: 00c0113544a1b8048aa7e6d66e7cf11d, type: 3}
+  - {fileID: 8300000, guid: 716e67bff824afc409e0d14b4af37ca2, type: 3}
   placeSFX: {fileID: 0}
 --- !u!82 &2119309741607244611
 AudioSource:

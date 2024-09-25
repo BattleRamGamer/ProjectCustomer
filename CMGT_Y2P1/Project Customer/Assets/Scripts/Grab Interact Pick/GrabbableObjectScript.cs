@@ -11,7 +11,7 @@ public class GrabbableObjectScript : MonoBehaviour
     public float dialogueTime = 5f;
     bool dialogueHasPlayed;
 
-    public AudioClip grabSFX = null;
+    public AudioClip[] grabSFX;
     public AudioClip placeSFX = null;
     AudioSource audioPlayer;
 
@@ -38,7 +38,10 @@ public class GrabbableObjectScript : MonoBehaviour
             }
             else
             {
-                PlaySound(grabSFX);
+                int nr = UnityEngine.Random.Range(0, grabSFX.Length);
+                AudioClip sound = grabSFX[nr];
+                Debug.Log("Playing grab sound " + nr);
+                PlaySound(sound);
                 isPlacedRight = false;
                 if (!dialogueHasPlayed && grabDialogue != "")
                 {
