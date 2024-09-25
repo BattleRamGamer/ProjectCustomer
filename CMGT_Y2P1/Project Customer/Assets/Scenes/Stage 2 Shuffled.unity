@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeCup S2
       objectReference: {fileID: 0}
+    - target: {fileID: 8220378825745873200, guid: 6db8801890df0254b8b7a17cf398d176, type: 3}
+      propertyPath: interactionDialogue
+      value: now don't forget to drink it
+      objectReference: {fileID: 0}
     - target: {fileID: 8384830669814614528, guid: 6db8801890df0254b8b7a17cf398d176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.255
@@ -489,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionDialogue
-      value: oh, it's just a pot..
+      value: what was this again?
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -719,7 +723,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: switchToScene
-      value: Stage 2
+      value: Stage 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: interactionDialogue
+      value: what a day...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: requiredInteractions.Array.data[0]
+      value: coffeeCupMilk S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: requiredInteractions.Array.data[1]
+      value: inspiration S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: requiredInteractions.Array.data[2]
+      value: easel S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[1]
+      value: i think i forgot my inspiration
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[2]
+      value: now is when i paint, right?
       objectReference: {fileID: 0}
     - target: {fileID: 4534163344957049045, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: m_LocalPosition.x
@@ -964,7 +992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionDialogue
-      value: that's just boiling water
+      value: maybe this?
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -1036,6 +1064,10 @@ PrefabInstance:
       propertyPath: interactionSFX
       value: 
       objectReference: {fileID: 8300000, guid: b0b9efede341cfe448d17697773ff632, type: 3}
+    - target: {fileID: 738010565306438541, guid: 36edf3c24e9570c458407081da01b958, type: 3}
+      propertyPath: interactionDialogue
+      value: something about this vinyl sounds off
+      objectReference: {fileID: 0}
     - target: {fileID: 897818718723317949, guid: 36edf3c24e9570c458407081da01b958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.534
@@ -1159,11 +1191,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[0]
-      value: brush
+      value: brush S2
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[1]
-      value: palette
+      value: palette S2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1716,11 +1748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[0]
-      value: brush
+      value: brush S2
       objectReference: {fileID: 0}
     - target: {fileID: 8847567981876525795, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: placerLinkIDs.Array.data[1]
-      value: palette
+      value: palette S2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2928,7 +2960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactableID
-      value: easel
+      value: easel S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionSFX
@@ -2972,11 +3004,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingObjectDialogues.Array.data[0]
-      value: i still need a brush
+      value: i feel like i'm still missing something long
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingObjectDialogues.Array.data[1]
-      value: i still need a palette
+      value: i feel like i'm still missing something round
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingInteractionDialogues.Array.size
@@ -2984,7 +3016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingInteractionDialogues.Array.data[0]
-      value: i haven't drunk anything yet
+      value: i haven't drunk my morning coffee yet
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingInteractionDialogues.Array.data[1]

@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32d20af5b816c84aaebf19b76e2620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EditKey: 13
 --- !u!1 &5375620939306458045
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectID: 
   hasPhysics: 0
+  grabDialogue: 
+  dialogueTime: 5
   grabSFX: {fileID: 0}
   placeSFX: {fileID: 0}
 --- !u!82 &1290021346578755520

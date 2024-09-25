@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NoteTextScript : MonoBehaviour
 {
+    public KeyCode EditKey;
+
     string text = "";
     bool isDone = false;
     void Start()
@@ -15,7 +17,7 @@ public class NoteTextScript : MonoBehaviour
     void Update()
     {
         // Stop/start typing if tab is pressed and is held in hand(placeholder)
-        if (Input.GetKeyDown(KeyCode.Tab) && 
+        if (Input.GetKeyDown(EditKey) && 
             (/*!GetComponentInParent<GrabbableObjectScript>().placedOnPlacable ||*/
             transform.parent.parent.parent.parent.tag != "IsPostItNotePlacement"))
         {
@@ -25,7 +27,7 @@ public class NoteTextScript : MonoBehaviour
             return;
         }
         if (/*GetComponentInParent<GrabbableObjectScript>().placedOnPlacable*/
-            transform.parent.parent.parent.parent.tag == "IsPostItNotePlacement")
+            transform.parent.parent.parent.parent.tag == "IsPostItNotePlacement" && !isDone)
         {
             isDone = true;
             PlayerMovement.GetPlayer().RestoreMoveSpeed();
