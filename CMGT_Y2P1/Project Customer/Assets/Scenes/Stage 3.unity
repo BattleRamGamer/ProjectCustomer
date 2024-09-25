@@ -211,14 +211,6 @@ PrefabInstance:
       value: CoffeeMachine
       objectReference: {fileID: 0}
     - target: {fileID: 9043021682253237912, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.288
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043021682253237912, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.145
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043021682253237912, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
@@ -1277,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1579551736368254954, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8262673
+      value: 0.892
       objectReference: {fileID: 0}
     - target: {fileID: 1579551736368254954, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
       propertyPath: m_LocalPosition.z

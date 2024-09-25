@@ -13,6 +13,10 @@ PrefabInstance:
       value: FamilyPicture S4 Distorted
       objectReference: {fileID: 0}
     - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
+      propertyPath: interactableID
+      value: failed familyPicture S4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
       propertyPath: interactionDialogue
       value: why do i have a photo of random people?
       objectReference: {fileID: 0}

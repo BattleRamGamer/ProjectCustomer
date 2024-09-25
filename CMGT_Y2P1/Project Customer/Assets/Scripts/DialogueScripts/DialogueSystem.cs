@@ -18,7 +18,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (mainDialogueSystem == null)
         {
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             mainDialogueSystem = this;
 
             // subscribe to events here
@@ -28,6 +28,11 @@ public class DialogueSystem : MonoBehaviour
             Debug.Log("Second dialogue system destroys itself");
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (mainDialogueSystem == this) mainDialogueSystem = null;
     }
 
     private void Start()
