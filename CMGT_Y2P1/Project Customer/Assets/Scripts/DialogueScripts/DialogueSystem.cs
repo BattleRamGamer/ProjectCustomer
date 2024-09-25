@@ -5,7 +5,7 @@ public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private TMP_Text dialogueObject;
 
-    public AudioClip dialogueSFX = null;
+    public AudioClip[] dialogueSFX;
     AudioSource audioPlayer;
 
     public static DialogueSystem GetMainDialogueSystem()
@@ -51,7 +51,7 @@ public class DialogueSystem : MonoBehaviour
     {
         CancelInvoke(nameof(StopText));
         dialogueObject.text = textValue;
-        PlaySound(dialogueSFX);
+        PlaySound();
         Invoke(nameof(StopText), timer);
     }
 
@@ -60,11 +60,14 @@ public class DialogueSystem : MonoBehaviour
         dialogueObject.text = "";
     }
 
-    private void PlaySound(AudioClip sound)
+    private void PlaySound()
     {
+        int nr = Random.Range(0, dialogueSFX.Length);
+        AudioClip sound = dialogueSFX[nr];
         if (audioPlayer != null && sound != null)
         {
             audioPlayer.PlayOneShot(sound);
+            Debug.Log("playing sound " + nr);
         }
         else
         {

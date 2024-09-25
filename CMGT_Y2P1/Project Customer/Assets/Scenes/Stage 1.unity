@@ -622,7 +622,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 750580787}
-  dialogueSFX: {fileID: 0}
+  dialogueSFX:
+  - {fileID: 8300000, guid: 4d41b8f77aab4b54cacf55b8785f27ea, type: 3}
+  - {fileID: 8300000, guid: 699eac76b90230549bd6f3dd7ce1a667, type: 3}
+  - {fileID: 8300000, guid: 2bd1a5976db90394990f1c8511fb3ad2, type: 3}
+  - {fileID: 8300000, guid: e8870ae8ea541ca428293d934b93c3bc, type: 3}
 --- !u!4 &626769755
 Transform:
   m_ObjectHideFlags: 0
