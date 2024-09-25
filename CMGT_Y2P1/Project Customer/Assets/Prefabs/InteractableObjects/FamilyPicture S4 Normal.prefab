@@ -13,6 +13,10 @@ PrefabInstance:
       value: FamilyPicture S4 Normal
       objectReference: {fileID: 0}
     - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
+      propertyPath: interactableID
+      value: familyPicture S4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
       propertyPath: interactionDialogue
       value: i remember these people, they're my family!
       objectReference: {fileID: 0}

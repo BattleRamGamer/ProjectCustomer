@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &73485979602383044
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1604440352107911799, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558245989853245467, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_Name
+      value: Milk S4 Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558245989853245467, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653974586268657468, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8305694654080335133, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+    - {fileID: 8261929825232174753, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3558245989853245467, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -7862275450867905294}
+  m_SourcePrefab: {fileID: 100100000, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+--- !u!1 &3487051632129261791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3558245989853245467, guid: 74ee8d3e883d4cd4eb6220c25bc02a5a, type: 3}
+  m_PrefabInstance: {fileID: 73485979602383044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7862275450867905294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3487051632129261791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57af941ab0f12b442bd4dbe709744228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableID: milk S4
+  requiredIDLinks: []
+  requiredInteractions: []
+  requiredHeldObjectID: 
+  destroyHeldObj: 0
+  dialogueTimer: 5
+  interactionDialogue: i remember this, i always put this in my drinks
+  missingObjectDialogues: []
+  missingInteractionDialogues: []
+  missingHeldObjDialogue: 
+  interactionSpawnsPrefab: {fileID: 0}
+  interactionSpawnPos: {fileID: 0}
+  giveObjectID: 
+  spawnTime: 2
+  selfDestruct: 0
+  interactionSFX: {fileID: 0}
+  fadeToBlack: 0
+  switchToScene: 

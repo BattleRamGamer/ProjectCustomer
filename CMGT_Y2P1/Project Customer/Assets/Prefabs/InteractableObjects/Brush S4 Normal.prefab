@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7537542774851175508
+--- !u!1001 &1647382864060889059
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -48,12 +48,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6915284586500993697, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
     - target: {fileID: 8709247746939869389, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
       propertyPath: m_Name
-      value: Brush
+      value: Brush S4 Normal
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8709247746939869389, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251356296806159819, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+    - {fileID: 4257131081074660983, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8709247746939869389, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -2628777567004989004}
   m_SourcePrefab: {fileID: 100100000, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+--- !u!1 &7926857965394652974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8709247746939869389, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+  m_PrefabInstance: {fileID: 1647382864060889059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2628777567004989004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7926857965394652974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57af941ab0f12b442bd4dbe709744228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableID: brush S4
+  requiredIDLinks: []
+  requiredInteractions: []
+  requiredHeldObjectID: 
+  destroyHeldObj: 0
+  dialogueTimer: 5
+  interactionDialogue: i remember these, but where do i use them
+  missingObjectDialogues: []
+  missingInteractionDialogues: []
+  missingHeldObjDialogue: 
+  interactionSpawnsPrefab: {fileID: 0}
+  interactionSpawnPos: {fileID: 0}
+  giveObjectID: 
+  spawnTime: 2
+  selfDestruct: 0
+  interactionSFX: {fileID: 0}
+  fadeToBlack: 0
+  switchToScene: 

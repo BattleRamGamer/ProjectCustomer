@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+      propertyPath: interactableID
+      value: coffeeMachine S4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: interactionDialogue
       value: i love coffee
       objectReference: {fileID: 0}
