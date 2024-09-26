@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.00055
       objectReference: {fileID: 0}
+    - target: {fileID: 4828812568232359803, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1008996439}
     - target: {fileID: 5682708991208508460, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.795128
@@ -291,6 +295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6553417209176601444, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1008996439}
     - target: {fileID: 8399601983591711202, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.00063
@@ -762,6 +770,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &1008996439 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3146898756832631265, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
+  m_PrefabInstance: {fileID: 1008996436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011252753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1294,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1462,7 +1475,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 64da0b9d2f0d53a45b034089d8b83723, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 1
   Mute: 0
