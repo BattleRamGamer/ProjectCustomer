@@ -17,7 +17,7 @@ public class InteractionScript : MonoBehaviour
         pickUpScript = GetComponent<PickUpScript>(); // Cache this once
         if (interactionIcon != null)
         {
-            interactionIcon.gameObject.SetActive(false); // Hide interaction icon initially
+            interactionIcon.enabled = false; // Hide interaction icon initially
         }
     }
 
@@ -38,7 +38,6 @@ public class InteractionScript : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
         {
-            Debug.Log($"Raycast hit: {hit.transform.name}");
             if (hit.transform.gameObject.tag == "canBeInteractedWith")
             {
                 // Hover logic continues
@@ -71,7 +70,7 @@ public class InteractionScript : MonoBehaviour
     {
         if (interactionIcon != null)
         {
-            interactionIcon.gameObject.SetActive(true); // Show the interaction icon
+            interactionIcon.enabled = true; // Show the interaction icon
             // Optionally, move the icon to follow the object or stay at a fixed position on the screen
         }
     }
@@ -80,7 +79,7 @@ public class InteractionScript : MonoBehaviour
     {
         if (interactionIcon != null)
         {
-            interactionIcon.gameObject.SetActive(false); // Hide the interaction icon
+            interactionIcon.enabled = false; // Hide the interaction icon
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // To use UI components
 
 public class PickUpScript : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PickUpScript : MonoBehaviour
     public Transform holdPos;
     public GameObject postItPrefab;
 
+    [Header("Pick-up UI")]
+    public RawImage pickupUIImage; // UI element for pickup interaction
     public float pickUpRange = 5f; // how far the player can pick up the object from
     private GameObject heldObj; // object which we pick up
     private Rigidbody heldObjRb; // Rigidbody of object we pick up
@@ -24,12 +27,13 @@ public class PickUpScript : MonoBehaviour
     void Start()
     {
         LayerNumber = LayerMask.NameToLayer("holdLayer"); // if your holdLayer is named differently, make sure to change this
+        pickupUIImage.enabled = false; // Make sure the UI is hidden at start
     }
 
     void Update()
     {
         // Grab post-it note
-        if (Input.GetKeyDown(PostItSummonKey) && heldObj == null 
+        if (Input.GetKeyDown(PostItSummonKey) && heldObj == null
             && enablePostItNotes && (postItNoteCount < postItNoteLimit))
         {
             PlayerMovement.GetPlayer().FreezeMovement(); // Freezing player movement
@@ -46,6 +50,37 @@ public class PickUpScript : MonoBehaviour
         if (heldObj != null) // if player is holding an object
         {
             MoveObject(); // keep object position at holdPos
+        }
+
+        ShowPickupUI(); // Check to show pickup UI
+    }
+
+    private void ShowPickupUI()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+        {
+            // Check if we are looking at a pick-upable object
+            if (hit.transform.CompareTag("canPickUp"))
+            {
+                // Show UI if the object is pick-upable and the player isn't holding anything
+                if (heldObj == null)
+                {
+                    pickupUIImage.enabled = true;
+                }
+                else
+                {
+                    pickupUIImage.enabled = false;
+                }
+            }
+            else
+            {
+                pickupUIImage.enabled = false; // Hide UI if not looking at an interactable object
+            }
+        }
+        else
+        {
+            pickupUIImage.enabled = false; // Hide UI when not looking at anything within range
         }
     }
 
@@ -90,7 +125,6 @@ public class PickUpScript : MonoBehaviour
 
                         PlacePostItNote(placeTarget);
                     }
-
                 }
 
                 // make sure right tag is attached
@@ -267,30 +301,3 @@ public class PickUpScript : MonoBehaviour
         return heldObj;
     }
 }
-
-
-
-/*void RotateObject()
-{
-    if (Input.GetKey(KeyCode.R))//hold R key to rotate, change this to whatever key you want
-    {
-        canDrop = false; //make sure throwing can't occur during rotating
-
-        //disable player being able to look around
-        //mouseLookScript.verticalSensitivity = 0f;
-        //mouseLookScript.lateralSensitivity = 0f;
-
-        float XaxisRotation = Input.GetAxis("Mouse X") * rotationSensitivity;
-        float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSensitivity;
-        //rotate the object depending on mouse X-Y Axis
-        heldObj.transform.Rotate(Vector3.down, XaxisRotation);
-        heldObj.transform.Rotate(Vector3.right, YaxisRotation);
-    }
-    else
-    {
-        //re-enable player being able to look around
-        //mouseLookScript.verticalSensitivity = originalvalue;
-        //mouseLookScript.lateralSensitivity = originalvalue;
-        canDrop = true;
-    }
-}*/
