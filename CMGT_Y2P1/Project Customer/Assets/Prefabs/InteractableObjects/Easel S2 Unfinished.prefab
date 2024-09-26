@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8827810433232568168
+--- !u!1001 &1583486405140171284
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,71 +10,83 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 336605179091448672, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_Name
-      value: Easel S4 Distorted
+      value: Easel S2 Unfinished
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: fadeToBlack
-      value: 0
+      propertyPath: selfDestruct
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactableID
-      value: failed easel S4
+      value: easel S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionSFX
+      propertyPath: interactionSpawnPos
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionDialogue
-      value: this is my favorite chair
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4153848698130304605}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionSpawnsPrefab
       value: 
+      objectReference: {fileID: 2427194352787131982, guid: cd7f4c315a63ba04c85bc7d2549f4d6b, type: 3}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: requiredIDLinks.Array.data[0]
+      value: brush S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.size
-      value: 0
+      propertyPath: requiredIDLinks.Array.data[1]
+      value: palette S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.size
-      value: 0
+      propertyPath: requiredInteractions.Array.data[0]
+      value: coffeeCupMilk S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.size
-      value: 0
+      propertyPath: requiredInteractions.Array.data[1]
+      value: inspiration S2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.size
-      value: 0
+      propertyPath: missingObjectDialogues.Array.data[0]
+      value: i feel like i'm still missing something long
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: missingObjectDialogues.Array.data[1]
+      value: i feel like i'm still missing something round
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[0]
+      value: i haven't drunk my morning coffee yet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[1]
+      value: creativity appears from inspiration
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.692
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 32.323
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.003427824
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.99999416
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -82,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -179.607
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -93,3 +105,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+--- !u!4 &4153848698130304605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3196644364508775497, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+  m_PrefabInstance: {fileID: 1583486405140171284}
+  m_PrefabAsset: {fileID: 0}
