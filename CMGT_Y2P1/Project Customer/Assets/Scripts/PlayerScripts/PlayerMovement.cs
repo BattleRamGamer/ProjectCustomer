@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;  // Reference to the Rigidbody component
 
     float storedMoveSpeed;
+    bool isWalking;
+
+    AudioSource audioPlayer;
 
     public static PlayerMovement GetPlayer()
     {
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();  // Get the Rigidbody component attached to this GameObject
         rb.freezeRotation = true;  // Freeze rotation to prevent physics affecting the orientation
         storedMoveSpeed = moveSpeed;
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,15 +87,50 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-    // Calculate movement direction based on orientation and input
-    moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        // Calculate movement direction based on orientation and input
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-    // Calculate the new position based on the move direction and speed
-    Vector3 newPosition = rb.position + moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;
+        // Movement sounds
+        if (moveDirection.normalized.magnitude > 0 && !isWalking)
+        {
+            isWalking = true;
+            PlayWalkSFX();
+        }
+        else if (moveDirection.normalized.magnitude < 0.01f && isWalking)
+        {
+            isWalking = false;
+            PlayWalkSFX();  // Name is misleading
+        }
 
-    // Move the player by setting the new position
-    rb.MovePosition(newPosition);
+        // Calculate the new position based on the move direction and speed
+        Vector3 newPosition = rb.position + moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;
+
+        // Move the player by setting the new position
+        rb.MovePosition(newPosition);
     }
+
+    void PlayWalkSFX()
+    {
+        if (audioPlayer != null)
+        {
+            if (isWalking)
+            {
+                //Debug.Log("started walk sfx");
+                audioPlayer.Play();
+            }
+            else
+            {
+                //Debug.Log("stopped walk sfx");
+                audioPlayer.Stop();
+            }
+        }
+        else
+        {
+            Debug.Log("Interactable: Cannot play sound. audioPlayer = " + (audioPlayer != null));
+        }
+    }
+
+
 
     public float GetMovementSpeed()
     {
