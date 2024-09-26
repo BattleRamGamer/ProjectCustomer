@@ -21,7 +21,7 @@ public class DialogueSystem : MonoBehaviour
             //DontDestroyOnLoad(gameObject);
             mainDialogueSystem = this;
 
-            // subscribe to events here
+            // Subscribe to events here
         }
         else
         {
@@ -83,7 +83,8 @@ public class DialogueSystem : MonoBehaviour
 
         foreach (Dialogue dialogue in dialogues)
         {
-            if (dialogue.GetInteractionToDisable() == interactionID)
+            // Check if the current dialogue has the interaction in its disable list
+            if (dialogue.GetInteractionsToDisable().Contains(interactionID))
             {
                 dialogue.CompleteInteraction();
             }

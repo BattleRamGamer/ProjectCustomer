@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic; // Make sure to include this for using List
 using UnityEngine;
 
 public class Dialogue : MonoBehaviour
@@ -11,14 +12,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private bool isRepetitive = false; // Is the dialogue repetitive?
     [SerializeField] private float repeatInterval = 30f; // Time after which dialogue reappears
 
-    [SerializeField] private string interactionToEnableTHIS = ""; // String for interaction that enables this trigger
-    [SerializeField] private string interactionToDisableTHIS; // String for interaction that disables repetition
-
-    // Public getter for interactionToDisable
-    public string GetInteractionToDisable()
-    {
-        return interactionToDisableTHIS;
-    }
+    [SerializeField] private List<string> interactionsToEnable = new List<string>(); // List of interactions that enable this dialogue
+    [SerializeField] private List<string> interactionsToDisable = new List<string>(); // List of interactions that disable this dialogue
 
     private bool interactionCompleted = false; // Track whether the required interaction is done
 
@@ -31,9 +26,8 @@ public class Dialogue : MonoBehaviour
     // Method called when another collider enters the trigger collider attached to this object
     void OnTriggerEnter(Collider other)
     {
-        // Check if the collider belongs to the player and if the required interaction has been completed
-        if (other.gameObject.CompareTag("Player") &&
-            (string.IsNullOrEmpty(interactionToEnableTHIS) || GameManager.GetMainManager().IsInteractedWith(interactionToEnableTHIS)))
+        // Check if the collider belongs to the player and if any required interaction to enable has been completed
+        if (other.gameObject.CompareTag("Player") && IsAnyEnableInteractionCompleted())
         {
             // Handle the dialogue text and display duration
             dialogueSystem.HandleText(dialogue, timer);
@@ -64,10 +58,41 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    // Check if any enable interactions have been completed
+    private bool IsAnyEnableInteractionCompleted()
+    {
+        // If there are no interactions needed to enable, return true
+        if (interactionsToEnable.Count == 0) return true;
+
+        // Check if any required interaction is completed
+        foreach (string interaction in interactionsToEnable)
+        {
+            if (GameManager.GetMainManager().IsInteractedWith(interaction))
+            {
+                return true; // Return true if at least one interaction is completed
+            }
+        }
+        return false; // None of the required interactions are completed
+    }
+
     // This method can be called when the specific interaction is completed
     public void CompleteInteraction()
     {
-        interactionCompleted = true;
-        Destroy(gameObject); // Optionally destroy the game object if the dialogue should stop
+        // Check if any of the disable interactions have been completed
+        foreach (string interaction in interactionsToDisable)
+        {
+            if (GameManager.GetMainManager().IsInteractedWith(interaction))
+            {
+                interactionCompleted = true;
+                Destroy(gameObject); // Optionally destroy the game object if the dialogue should stop
+                return;
+            }
+        }
+    }
+
+    // Public getter for interactionsToDisable
+    public List<string> GetInteractionsToDisable()
+    {
+        return interactionsToDisable;
     }
 }
