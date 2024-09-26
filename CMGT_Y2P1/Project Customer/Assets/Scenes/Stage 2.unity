@@ -698,7 +698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4007519906488947265, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.412
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 4007519906488947265, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1577,7 +1577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4007519906488947265, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.709
+      value: 4.407
       objectReference: {fileID: 0}
     - target: {fileID: 4007519906488947265, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1651,6 +1651,10 @@ PrefabInstance:
     - target: {fileID: 1667142807747684253, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209667690202750716, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3179603712808796690, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalRotation.w
