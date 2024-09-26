@@ -1,18 +1,24 @@
-using System.Collections;
 using UnityEngine;
+using UnityEngine.UI; // For UI components like RawImage
 
 public class InteractionScript : MonoBehaviour
 {
     public KeyCode interactionKey;
     public float interactRange = 5f; // How far the player can interact from
+    public RawImage interactionIcon; // Reference to the UI RawImage (e.g., PNG texture)
 
     private int holdLayerNr;
     private PickUpScript pickUpScript; // Cache PickUpScript
+    private bool isHovering = false; // To track hover state
 
     void Start()
     {
         holdLayerNr = LayerMask.NameToLayer("holdLayer");
         pickUpScript = GetComponent<PickUpScript>(); // Cache this once
+        if (interactionIcon != null)
+        {
+            interactionIcon.gameObject.SetActive(false); // Hide interaction icon initially
+        }
     }
 
     void Update()
@@ -22,6 +28,60 @@ public class InteractionScript : MonoBehaviour
             Debug.Log("Pressed interaction key");
             TryInteract();
         }
+        HandleHover(); // Check hover state every frame
+    }
+
+    void HandleHover()
+    {
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * interactRange, Color.red);
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
+        {
+            Debug.Log($"Raycast hit: {hit.transform.name}");
+            if (hit.transform.gameObject.tag == "canBeInteractedWith")
+            {
+                // Hover logic continues
+                if (!isHovering) // Only activate if we weren't hovering before
+                {
+                    isHovering = true;
+                    ShowInteractionIcon(hit);
+                }
+            }
+            else
+            {
+                if (isHovering)
+                {
+                    isHovering = false;
+                    HideInteractionIcon();
+                }
+            }
+        }
+        else
+        {
+            if (isHovering)
+            {
+                isHovering = false;
+                HideInteractionIcon();
+            }
+        }
+    }
+
+    void ShowInteractionIcon(RaycastHit hit)
+    {
+        if (interactionIcon != null)
+        {
+            interactionIcon.gameObject.SetActive(true); // Show the interaction icon
+            // Optionally, move the icon to follow the object or stay at a fixed position on the screen
+        }
+    }
+
+    void HideInteractionIcon()
+    {
+        if (interactionIcon != null)
+        {
+            interactionIcon.gameObject.SetActive(false); // Hide the interaction icon
+        }
     }
 
     void TryInteract()
@@ -30,7 +90,6 @@ public class InteractionScript : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange, ~(1 << holdLayerNr)))
         {
             Debug.Log("Raycast hit something");
-
             TryInteract(hit); // Separate method for tag and interaction check
         }
         else
