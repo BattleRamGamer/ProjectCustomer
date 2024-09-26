@@ -915,6 +915,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4828812568232359803, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 726093942}
     - target: {fileID: 5682708991208508460, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.795128
@@ -955,6 +959,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6553417209176601444, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 726093942}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1051,6 +1059,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &726093942 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3146898756832631265, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
+  m_PrefabInstance: {fileID: 726093939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &742175794
 GameObject:
   m_ObjectHideFlags: 0
