@@ -429,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 126f2e35dfdc6ff48939549d024a9968, type: 3}
+      objectReference: {fileID: 8300000, guid: 8645554a6e563c84cac6cacf0f93c6e4, type: 3}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionDialogue
       value: now I can finally start painting
@@ -657,7 +657,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1644,7 +1644,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 64da0b9d2f0d53a45b034089d8b83723, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 1
   Mute: 0
