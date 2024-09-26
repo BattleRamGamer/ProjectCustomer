@@ -2553,8 +2553,24 @@ PrefabInstance:
       value: Bed
       objectReference: {fileID: 0}
     - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: fadeToBlack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: switchToScene
-      value: Stage 2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: interactionDialogue
+      value: time to start my day
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: requiredInteractions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: missingInteractionDialogues.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4534163344957049045, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: m_LocalPosition.x
