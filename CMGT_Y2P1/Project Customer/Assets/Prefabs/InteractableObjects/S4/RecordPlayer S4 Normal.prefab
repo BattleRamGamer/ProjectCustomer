@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 0a59548895bae0242b9624add17c46c2, type: 3}
+      objectReference: {fileID: 8300000, guid: fedbcc10c5283f342a24f2a9a1199321, type: 3}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionDialogue
       value: i remember this, it plays my favorite song!
