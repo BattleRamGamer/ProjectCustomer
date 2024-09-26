@@ -100,6 +100,8 @@ Material:
     - Vector1_E8746023: 16
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Alpha_Clipping: 0.1
+    - _Alpha_Multiplier: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
