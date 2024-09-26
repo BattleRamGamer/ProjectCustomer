@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;  // Reference to the Rigidbody component
 
+    Vector3 startPos;
     float storedMoveSpeed;
     bool isWalking;
 
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;  // Freeze rotation to prevent physics affecting the orientation
         storedMoveSpeed = moveSpeed;
         audioPlayer = GetComponent<AudioSource>();
+        startPos = rb.position;
     }
 
     private void Update()
@@ -107,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Move the player by setting the new position
         rb.MovePosition(newPosition);
+
+        if (rb.position.y < -10) rb.position = startPos;
     }
 
     void PlayWalkSFX()
