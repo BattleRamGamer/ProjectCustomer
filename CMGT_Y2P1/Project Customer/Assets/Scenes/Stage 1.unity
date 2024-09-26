@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 19b325d8192ae6a449129122516d0427, type: 2}
   m_HaloStrength: 0.5
@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f1756beffffa493438e5090a91ce2cc6, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -780,7 +780,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.767
+    m_Strength: 0.742
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -814,8 +814,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_ColorTemperature: 4785
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -829,13 +829,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.548525, y: -0.116662316, z: 0.5036842, w: 0.65712446}
-  m_LocalPosition: {x: -10.67, y: -30.61, z: 22.89}
+  m_LocalRotation: {x: 0.17795761, y: -0.7625634, z: -0.11208259, w: 0.61177254}
+  m_LocalPosition: {x: 68.9, y: 7.2, z: 48.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 56.974, y: -312.902, z: -258.447}
+  m_LocalEulerAnglesHint: {x: 2.682, y: -463.097, z: -384.142}
 --- !u!114 &705507996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,139 +1154,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
---- !u!1001 &1292398583
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 336605179091448672, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_Name
-      value: Easel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: fadeToBlack
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: giveObjectID
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: switchToScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactableID
-      value: easel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: dd51ea2c3c6c5124ba013332d90de0fc, type: 3}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionDialogue
-      value: i can finally start painting!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredHeldObjectID
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.data[0]
-      value: brush
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.data[1]
-      value: palette
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.data[0]
-      value: coffeeCupMilk
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.data[1]
-      value: inspiration
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.data[0]
-      value: i still need a brush
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.data[1]
-      value: i still need a palette
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.data[0]
-      value: i still need to drink my coffee
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.data[1]
-      value: i could use some inspiration for today
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 36.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
 --- !u!1001 &1342482454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1352,6 +1219,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e8a9da04c361940a4afd1c7ec1c9a4, type: 3}
+--- !u!1 &1396979746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396979750}
+  - component: {fileID: 1396979749}
+  - component: {fileID: 1396979748}
+  - component: {fileID: 1396979747}
+  m_Layer: 0
+  m_Name: Ceiling block
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1396979747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396979746}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1396979748
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396979746}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1396979749
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396979746}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1396979750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396979746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5981, y: 3.86, z: 28.0797}
+  m_LocalScale: {x: 15.480753, y: 1, z: 21.722626}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1471184138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1733,6 +1705,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1641577073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6659681309793000440, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_Name
+      value: Easel S1 Unfinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000001192093
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
 --- !u!1001 &1733983663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,9 +2013,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 585888970818865021, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0018
+      objectReference: {fileID: 0}
     - target: {fileID: 1667142807747684253, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209667690202750716, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4828812568232359803, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: playerCamera
@@ -2036,6 +2073,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1136027462}
+    - target: {fileID: 6796937960352499244, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2054,7 +2095,7 @@ SceneRoots:
   - {fileID: 1733983663}
   - {fileID: 4674281953985619944}
   - {fileID: 432035725}
-  - {fileID: 1292398583}
+  - {fileID: 1641577073}
   - {fileID: 1002757834}
   - {fileID: 1267422606}
   - {fileID: 1342482454}
@@ -2063,3 +2104,4 @@ SceneRoots:
   - {fileID: 1873630471}
   - {fileID: 1013640901}
   - {fileID: 1471184138}
+  - {fileID: 1396979750}

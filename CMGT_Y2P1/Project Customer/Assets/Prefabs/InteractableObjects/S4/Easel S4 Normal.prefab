@@ -25,6 +25,10 @@ PrefabInstance:
       value: '*happy humming*'
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: interactionSpawnsPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: requiredIDLinks.Array.size
       value: 0
       objectReference: {fileID: 0}

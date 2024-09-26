@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f5805b0520dbc2243b216cefd1eb2096, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -174,7 +174,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.91764706, g: 0.76862746, b: 0.5058824, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -218,8 +218,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_ColorTemperature: 2500
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -233,8 +233,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67363092}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.548525, y: -0.116662316, z: 0.5036842, w: 0.65712446}
-  m_LocalPosition: {x: -10.67, y: -30.61, z: 22.89}
+  m_LocalRotation: {x: 0.49662185, y: -0.7926259, z: -0.13386042, w: 0.32740247}
+  m_LocalPosition: {x: 73.6, y: 8.9, z: 107.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1922,6 +1922,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2840b36d506336d43a5ab7b98fa5a68a, type: 3}
+--- !u!1001 &1469356344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1248184147336706420, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_Name
+      value: Easel S2 Unfinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.003427824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99999416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
 --- !u!1001 &1550831472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3175,139 +3232,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
---- !u!1001 &1956084343
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 336605179091448672, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_Name
-      value: Easel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: fadeToBlack
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: giveObjectID
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: switchToScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactableID
-      value: easel S2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: dd51ea2c3c6c5124ba013332d90de0fc, type: 3}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: interactionDialogue
-      value: i can finally start painting!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredHeldObjectID
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.data[0]
-      value: brush S2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredIDLinks.Array.data[1]
-      value: palette S2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.data[0]
-      value: coffeeCupMilk S2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: requiredInteractions.Array.data[1]
-      value: inspiration S2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.data[0]
-      value: i feel like i'm still missing something long
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingObjectDialogues.Array.data[1]
-      value: i feel like i'm still missing something round
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.data[0]
-      value: i haven't drunk my morning coffee yet
-      objectReference: {fileID: 0}
-    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: missingInteractionDialogues.Array.data[1]
-      value: creativity appears from inspiration
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 32.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.003427824
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.99999416
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -179.607
-      objectReference: {fileID: 0}
-    - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
 --- !u!1001 &1962144799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3392,7 +3316,7 @@ SceneRoots:
   - {fileID: 1439226903}
   - {fileID: 167683203}
   - {fileID: 1680169532}
-  - {fileID: 1956084343}
+  - {fileID: 1469356344}
   - {fileID: 831281628}
   - {fileID: 1363489909}
   - {fileID: 768648576}
