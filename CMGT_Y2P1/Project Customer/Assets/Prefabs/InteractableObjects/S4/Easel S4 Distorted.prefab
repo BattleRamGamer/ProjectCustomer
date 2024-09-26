@@ -88,6 +88,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.372
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5035928
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.47440642
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38459823
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6110787
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -108.584
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 142.856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483180127078585814, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -51.830017
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
