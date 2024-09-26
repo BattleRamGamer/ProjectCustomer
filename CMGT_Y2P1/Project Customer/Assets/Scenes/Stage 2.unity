@@ -1784,6 +1784,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1630462}
+    - target: {fileID: 4953533038909521086, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4991103750588029552, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
