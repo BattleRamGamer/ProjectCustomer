@@ -73,7 +73,91 @@ PrefabInstance:
       value: CoffeeMachine S4 Distorted
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 5244434042597793679, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+    - {fileID: 3982891650231021615, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1907409277442688797, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9203181940446148992}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+--- !u!4 &4082890334729629497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1907409277442688797, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+  m_PrefabInstance: {fileID: 2508836501059463204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8661262435210518123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4082890334729629497}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2548969
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2548974
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2548969
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.448
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+      propertyPath: m_Name
+      value: distorted_coffee_machine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+--- !u!4 &9203181940446148992 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6661a904b8808cf48b2464e002159fd3, type: 3}
+  m_PrefabInstance: {fileID: 8661262435210518123}
+  m_PrefabAsset: {fileID: 0}
