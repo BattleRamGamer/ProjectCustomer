@@ -139,6 +139,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2932442419624426632, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
+      propertyPath: interactRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932442419624426632, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
       propertyPath: interactionIcon
       value: 
       objectReference: {fileID: 821106983}
@@ -185,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 4787421472207980584, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976502189414153941, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
+      propertyPath: pickUpRange
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4976502189414153941, guid: c52c4964a67eecd43a5bfc01a1567572, type: 3}
       propertyPath: pickupUIImage
@@ -439,6 +447,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
     - target: {fileID: 3638451760389618643, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.002
@@ -486,6 +498,10 @@ PrefabInstance:
     - target: {fileID: 5020832044009125257, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_Convex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
       objectReference: {fileID: 0}
     - target: {fileID: 5682708991208508460, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalScale.x
@@ -566,13 +582,59 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5734088468873170263, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1900819446}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 453091765}
+    - targetCorrespondingSourceObject: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 453091764}
   m_SourcePrefab: {fileID: 100100000, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
 --- !u!4 &453091761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6783255373079834494, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
   m_PrefabInstance: {fileID: 453091760}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &453091762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+  m_PrefabInstance: {fileID: 453091760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &453091763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+  m_PrefabInstance: {fileID: 453091760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &453091764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453091762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe711b8573279304b85de5f5d89cbc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionKey: 0
+  interactRange: 2
+  interactionIcon: {fileID: 821106983}
+--- !u!114 &453091765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453091763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe711b8573279304b85de5f5d89cbc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionKey: 0
+  interactRange: 2
+  interactionIcon: {fileID: 821106983}
 --- !u!1001 &562033228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2002,7 +2064,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: cc33b0030eb7b1e428112e2a569882df, type: 2}
+  sharedProfile: {fileID: 11400000, guid: e7ebd7fa8db425f48949ee7eb0988c77, type: 2}
 --- !u!4 &1834083259
 Transform:
   m_ObjectHideFlags: 0

@@ -1699,7 +1699,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: cc33b0030eb7b1e428112e2a569882df, type: 2}
+  sharedProfile: {fileID: 11400000, guid: d52072141d73ad5418c4ca18ac8182cb, type: 2}
 --- !u!4 &1241228130
 Transform:
   m_ObjectHideFlags: 0
@@ -1958,6 +1958,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   fadeDuration: 2
+--- !u!1 &1347601656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+  m_PrefabInstance: {fileID: 1650143102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1347601658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347601656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe711b8573279304b85de5f5d89cbc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionKey: 0
+  interactRange: 2
+  interactionIcon: {fileID: 1523850514}
 --- !u!1001 &1363489909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2736,6 +2756,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -34.023
       objectReference: {fileID: 0}
+    - target: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
     - target: {fileID: 2859215000772142770, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.337
@@ -2903,6 +2927,10 @@ PrefabInstance:
     - target: {fileID: 5601548098339488813, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.741
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
       objectReference: {fileID: 0}
     - target: {fileID: 5682708991208508460, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3254,7 +3282,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901944517920841193, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1783703159}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1874868685}
+    - targetCorrespondingSourceObject: {fileID: 5622786767965585610, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1347601658}
   m_SourcePrefab: {fileID: 100100000, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
 --- !u!4 &1650143103 stripped
 Transform:
@@ -3486,6 +3520,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5bea2b1a597d9549a138b2f1d260911, type: 3}
+--- !u!1 &1874868683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2840619178133231784, guid: 55784d36b4667cb4c88dc0240f75bf99, type: 3}
+  m_PrefabInstance: {fileID: 1650143102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1874868685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874868683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe711b8573279304b85de5f5d89cbc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionKey: 0
+  interactRange: 2
+  interactionIcon: {fileID: 1523850514}
 --- !u!1001 &1962144799
 PrefabInstance:
   m_ObjectHideFlags: 0

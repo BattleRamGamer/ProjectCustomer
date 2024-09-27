@@ -18,7 +18,7 @@ public class PickUpScript : MonoBehaviour
 
     [Header("Pick-up UI")]
     public RawImage pickupUIImage; // UI element for pickup interaction
-    public float pickUpRange = 5f; // how far the player can pick up the object from
+    public float pickUpRange = 2f; // how far the player can pick up the object from
     private GameObject heldObj; // object which we pick up
     private Rigidbody heldObjRb; // Rigidbody of object we pick up
     private int LayerNumber; // layer index

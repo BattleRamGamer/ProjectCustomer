@@ -4,7 +4,7 @@ using UnityEngine.UI; // For UI components like RawImage
 public class InteractionScript : MonoBehaviour
 {
     public KeyCode interactionKey;
-    public float interactRange = 5f; // How far the player can interact from
+    public float interactRange = 2f; // How far the player can interact from
     public RawImage interactionIcon; // Reference to the UI RawImage (e.g., PNG texture)
 
     private int holdLayerNr;

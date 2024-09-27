@@ -23,12 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage 4 Mirrored.unity
     guid: d63313e670178c14192f62fb326ba433
-  - enabled: 0
-    path: Assets/Scenes/Stage 4 (unused).unity
-    guid: 4e9b6371fe1b42f4b9682c9ed582fa2a
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 05da61645ab359a49a95847deaef89c4
+  - enabled: 0
+    path: Assets/Scenes/Stage 4 (unused).unity
+    guid: 4e9b6371fe1b42f4b9682c9ed582fa2a
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
