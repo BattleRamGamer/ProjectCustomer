@@ -1475,7 +1475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionDialogue
-      value: that's not it
+      value: that's barely making coffee..
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -2522,7 +2522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionDialogue
-      value: why is this even here..?
+      value: is this a bucker or what..?
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionSpawnsPrefab

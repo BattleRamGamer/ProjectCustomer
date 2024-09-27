@@ -97,7 +97,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: what even is this..?
+  interactionDialogue: what the shampoo is doing here..?
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 
