@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503963676429311865, guid: fe7f092cb51a20842845c24f2b644985, type: 3}
       propertyPath: interactionDialogue
-      value: uuhh, should I paint?
+      value: i feel like making something, but i'm not really inspired...
       objectReference: {fileID: 0}
     - target: {fileID: 6974275535463360765, guid: fe7f092cb51a20842845c24f2b644985, type: 3}
       propertyPath: m_Name

@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2127712177087393089, guid: 439d1403f7dd53d4ea675c52d235d8bc, type: 3}
+      propertyPath: interactionDialogue
+      value: why are their faces so hard to remember?
+      objectReference: {fileID: 0}
     - target: {fileID: 3543415481011821253, guid: 439d1403f7dd53d4ea675c52d235d8bc, type: 3}
       propertyPath: m_Name
       value: FamilyPicture S2
@@ -372,7 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220378825745873200, guid: 6db8801890df0254b8b7a17cf398d176, type: 3}
       propertyPath: interactionDialogue
-      value: now don't forget to drink it
+      value: this should be good
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220378825745873200, guid: 6db8801890df0254b8b7a17cf398d176, type: 3}
+      propertyPath: missingHeldObjDialogue
+      value: it's missing something...
       objectReference: {fileID: 0}
     - target: {fileID: 8384830669814614528, guid: 6db8801890df0254b8b7a17cf398d176, type: 3}
       propertyPath: m_LocalPosition.x
@@ -493,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionDialogue
-      value: what was this again?
+      value: why is this even here..?
       objectReference: {fileID: 0}
     - target: {fileID: 5052690524792037006, guid: 877a0d8acbd94424b855f8c5b23389b5, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -766,6 +774,132 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &497119592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497119593}
+  - component: {fileID: 497119597}
+  - component: {fileID: 497119596}
+  - component: {fileID: 497119595}
+  - component: {fileID: 497119594}
+  m_Layer: 0
+  m_Name: (2)Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &497119593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497119592}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.2329, y: 1.6903, z: 34.4583}
+  m_LocalScale: {x: 7.65557, y: 3.36588, z: 4.66172}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1277727554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497119594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497119592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69cf2c74a8605409c581441ca95afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
+  dialogue: i need to gather my... things
+  isRepetitive: 1
+  repeatInterval: 30
+  interactionsToEnable:
+  - inspiration
+  interactionsToDisable:
+  - easel
+--- !u!65 &497119595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497119592}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &497119596
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497119592}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &497119597
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497119592}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &583264299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1050,7 +1184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionDialogue
-      value: maybe this?
+      value: that's not it
       objectReference: {fileID: 0}
     - target: {fileID: 4499668253121731438, guid: 91d73fdea2ad5e2449ee60d0ff36c1f7, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -1462,6 +1596,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e7981f022fcb7da478bee22b626d3056, type: 2}
+    - target: {fileID: 9087310494620447369, guid: 224b0c6d16744e641937ae4187adfda3, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1861,6 +1999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 624337551}
+  - {fileID: 497119593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1294071509
@@ -2240,6 +2379,18 @@ PrefabInstance:
     - target: {fileID: 4301406423329422784, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465859676499758832, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: interactionDialogue
+      value: finally...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465859676499758832, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[0]
+      value: i'm too tired for this
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465859676499758832, guid: bc70bf12e6021fa4e9cd5862868e8695, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[1]
+      value: i still don't know what i want to paint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

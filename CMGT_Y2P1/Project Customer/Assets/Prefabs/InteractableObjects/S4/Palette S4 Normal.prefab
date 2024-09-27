@@ -93,7 +93,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: i remember this, i can use this for painting
+  interactionDialogue: my palette! i should really clean it soon...
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 

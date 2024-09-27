@@ -434,8 +434,8 @@ Transform:
   m_GameObject: {fileID: 195068284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2348, y: 1.6903, z: 19.5888}
-  m_LocalScale: {x: 1.5461116, y: 3.365877, z: 1.2682605}
+  m_LocalPosition: {x: 4.2172, y: 1.6903, z: 19.9906}
+  m_LocalScale: {x: 1.7781258, y: 3.365877, z: 2.071957}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1428768772}
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 100
-  dialogue: T - Summon post-it note, ENTER - Toggle write mode
+  dialogue: dad has been really forgetful lately...
   isRepetitive: 0
   repeatInterval: 7
   interactionsToEnable: []
@@ -691,7 +691,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: dad always wants his coffee with milk
+  interactionDialogue: he always put milk in his coffee
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 
@@ -1073,7 +1073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionDialogue
-      value: dad loves to listen to music for inspiration
+      value: he used to listen to music for inspiration
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: requiredHeldObjectID
@@ -1343,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 742175794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.63, y: 1.6903, z: 24.61}
+  m_LocalPosition: {x: 1.672, y: 1.6903, z: 26.92}
   m_LocalScale: {x: 7.514006, y: 3.365877, z: 8.127085}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
-  dialogue: i should help my dad out while he's asleep
+  dialogue: maybe leaving some notes would help him remember
   isRepetitive: 0
   repeatInterval: 7
   interactionsToEnable: []
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: can't paint without paint
+  interactionDialogue: i still can't hold one of these properly
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 
@@ -2410,13 +2410,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 1445460928243305569, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: m_TagString
+      value: canBeInteractedWith
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: fadeToBlack
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: interactionDialogue
-      value: dad looks fast asleep, i'd better not disturb him
+      value: it looks comfortable
       objectReference: {fileID: 0}
     - target: {fileID: 4081620700385999845, guid: a302b9f21b1729e4892c5b27cee97378, type: 3}
       propertyPath: requiredInteractions.Array.size
@@ -2945,7 +2953,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: i would love to paint together with dad someday
+  interactionDialogue: i would love to paint with him someday
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 
@@ -3060,6 +3068,10 @@ PrefabInstance:
     - target: {fileID: 7194096770481068259, guid: 06f9428c9ad92b1459308c257960403e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322519882077006803, guid: 06f9428c9ad92b1459308c257960403e, type: 3}
+      propertyPath: interactionDialogue
+      value: i'm glad to see he's still painting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

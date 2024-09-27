@@ -17,12 +17,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
+      propertyPath: switchToScene
+      value: EndScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactableID
       value: easel S4
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionDialogue
-      value: '*happy humming*'
+      value: let's see if i remember how to do this...
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionSpawnsPrefab
@@ -70,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingInteractionDialogues.Array.data[0]
-      value: i remember this! now where did i leave my paint...
+      value: i remember this! now where did i leave my palette...
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: missingInteractionDialogues.Array.data[1]
-      value: i remember this! now where did i leave my brush...
+      value: i remember this! can't paint without my brushes though...
       objectReference: {fileID: 0}
     - target: {fileID: 3334922279047428052, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: m_LocalPosition.x
