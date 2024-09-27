@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionDialogue
-      value: i worked hard today, time to sleep
+      value: even this is becoming tiring at this age... i should head to bed
       objectReference: {fileID: 0}
     - target: {fileID: 2882382686365156580, guid: 1f4e333e6bfbb8244b184dab1b638545, type: 3}
       propertyPath: interactionSpawnsPrefab

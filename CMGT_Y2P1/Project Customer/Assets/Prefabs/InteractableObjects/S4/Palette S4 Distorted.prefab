@@ -176,8 +176,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: this is my cheese plank, but i'm not hungry for a snack right
-    now
+  interactionDialogue: such a weird plate
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 

@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionDialogue
-      value: i have always loved watching TV
+      value: such a waste of space
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: requiredInteractions.Array.size

@@ -97,7 +97,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: i bet i can make my daughter happy with this toy house
+  interactionDialogue: what even is this..?
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 

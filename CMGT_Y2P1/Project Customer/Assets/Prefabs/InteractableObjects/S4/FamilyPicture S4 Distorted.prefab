@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
       propertyPath: interactionDialogue
-      value: why do i have a photo of random people?
+      value: who are these people..?
       objectReference: {fileID: 0}
     - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
       propertyPath: requiredInteractions.Array.size

@@ -93,7 +93,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: i remember this, i always put this in my drinks
+  interactionDialogue: it takes the bitterness away!
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 

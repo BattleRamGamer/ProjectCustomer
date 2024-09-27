@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
-  dialogue: i have to make a coffee first thing in the morning
+  dialogue: i'm really craving a coffee
   isRepetitive: 1
   repeatInterval: 30
   interactionsToEnable: []
@@ -444,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8645554a6e563c84cac6cacf0f93c6e4, type: 3}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: interactionDialogue
-      value: now I can finally start painting
+      value: one of my favorites
       objectReference: {fileID: 0}
     - target: {fileID: 2295518070422815431, guid: 2fd8e95d65c0ed443bf1e942aa785e1d, type: 3}
       propertyPath: requiredHeldObjectID
@@ -1021,6 +1021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FamilyPicture
       objectReference: {fileID: 0}
+    - target: {fileID: 7581875819315433378, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
+      propertyPath: interactionDialogue
+      value: we don't spend as much time together anymore...
+      objectReference: {fileID: 0}
     - target: {fileID: 8030052343779949714, guid: 91c16e69e61edf34baa32d2cecd26611, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.678
@@ -1310,8 +1314,8 @@ Transform:
   m_GameObject: {fileID: 1475337724}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3102, y: 1.6903, z: 30.0974}
-  m_LocalScale: {x: 4.5778737, y: 3.365877, z: 6.3261228}
+  m_LocalPosition: {x: 6.2329, y: 1.6903, z: 34.4583}
+  m_LocalScale: {x: 7.655574, y: 3.365877, z: 4.66172}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 626769755}
@@ -1329,12 +1333,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
-  dialogue: there should be a coffee machine somewhere
+  dialogue: i need to bring my painting tools next to the easel
   isRepetitive: 1
   repeatInterval: 30
-  interactionsToEnable: []
+  interactionsToEnable:
+  - inspiration
   interactionsToDisable:
-  - coffeeCup
+  - easel
 --- !u!65 &1475337727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1613,6 +1618,26 @@ PrefabInstance:
     - target: {fileID: 6659681309793000440, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
       propertyPath: m_Name
       value: Easel S1 Unfinished
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124612155011001468, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: interactionDialogue
+      value: this never gets old
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124612155011001468, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: missingObjectDialogues.Array.data[0]
+      value: i need to bring my brushes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124612155011001468, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: missingObjectDialogues.Array.data[1]
+      value: can't forget my palette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124612155011001468, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[0]
+      value: i need my coffee first
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124612155011001468, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
+      propertyPath: missingInteractionDialogues.Array.data[1]
+      value: i still don't know what i want to paint
       objectReference: {fileID: 0}
     - target: {fileID: 8541123257848307532, guid: f4e1487dff36f3a4480647677dee24f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1922,7 +1947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: interactionDialogue
-      value: now I need to add milk
+      value: where's the milk?
       objectReference: {fileID: 0}
     - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: requiredHeldObjectID

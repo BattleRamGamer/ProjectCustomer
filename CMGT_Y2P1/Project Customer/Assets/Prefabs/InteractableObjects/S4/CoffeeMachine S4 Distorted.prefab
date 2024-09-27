@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: interactionDialogue
-      value: what a funny looking tea kettle
+      value: why does this make so much noise..?
       objectReference: {fileID: 0}
     - target: {fileID: 2031188634327184429, guid: b29d62b665ca76c4e9a9e4d2d396ec05, type: 3}
       propertyPath: interactionSpawnsPrefab

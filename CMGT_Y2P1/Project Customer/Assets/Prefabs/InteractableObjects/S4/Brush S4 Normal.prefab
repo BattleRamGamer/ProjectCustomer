@@ -93,7 +93,7 @@ MonoBehaviour:
   requiredHeldObjectID: 
   destroyHeldObj: 0
   dialogueTimer: 5
-  interactionDialogue: i remember these, but where do i use them
+  interactionDialogue: oh, my brushes! an extension of my soul
   missingObjectDialogues: []
   missingInteractionDialogues: []
   missingHeldObjDialogue: 
