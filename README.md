@@ -50,32 +50,32 @@ The gameplay is designed as a metaphor for the disease:
 This project was built by a multidisciplinary team of 7 students.
 
 **Engineering & Technical Design**
-* **Nichita Cebotari (Engineer):**
+* **[Nichita Cebotari (Engineer)](https://linktr.ee/nikkicheb):**
     * Implemented custom **Post-Processing** effects for vision distortion.
     * Scripted **Character Movement** and **UI Systems**.
     * Contributed to Level Design and mechanics brainstorming.
-* **Bram Salomons (Core Mechanics Engineer):**
+* **[Bram Salomons (Core Mechanics Engineer)](https://www.linkedin.com/in/bram-salomons-2b97242ba/):**
     * Built the core interaction framework (Item pickup, usage).
     * Developed the **Sticky Note** mechanic and Game State Transition framework.
     * Managed the "Shuffling" logic for environment changes.
 
 **Game Design & Narrative**
-* **Marius Irimia (Designer):**
+* **[Marius Irimia (Designer)](https://www.linkedin.com/in/marius-irimia-7a192a2ba/):**
     * Concepted the core story and brainstormed mechanics.
     * Created user stories, documentation, and asset lists.
     * Contributed to Level Design and 3D modeling.
-* **Niels Reening (Designer):**
+* **[Niels Reening (Designer)](https://www.linkedin.com/in/niels-reening-0129322ba/):**
     * Conducted in-depth research on Alzheimer's symptoms for accurate representation.
     * Worked on the Game Design Document (GDD) and built the final level layout.
 
 **Art & Visuals**
-* **Catalin Apostol (Artist):**
+* **[Catalin Apostol (Artist)](https://cata1029.artstation.com):**
     * Created the moodboard, stylesheet, and concept art.
     * Handled the bulk of **3D Modeling and Texturing** for the environment.
-* **Mariia Nechepurenko (Artist):**
+* **[Mariia Nechepurenko (Artist)](https://www.artstation.com/mariianechepurenko):**
     * Managed Scrum tasks and team organization.
     * Contributed to visual research, concept art, and 3D modeling of props.
-* **Kyra Zendman (Artist):**
+* **[Kyra Zendman (Artist)](https://www.linkedin.com/in/kyra-zendman-2467bb223/):**
     * Created SWOT analyses and empathy maps to ensure the game hit the right emotional tone.
     * Helped with 3D modelling of props.
     * Created the storyboard and promotional cinematic.
