@@ -29,17 +29,17 @@ This project was developed during a **3-week client-based module**, with a focus
 
 ## 🌣 Project Highlights
 
-### 👁️ Visualizing Cognitive Decline
+### 𓁿 Visualizing Cognitive Decline
 The engineering and art teams collaborated to create a "Disorientation Engine" that visually represents the stages of Alzheimer's:
 * **Progressive Distortion:** Custom post-processing stacks simulate vision loss. Objects transition from sharp to blurred, and finally to distorted, unrecognizable shapes.
 * **Environment Shuffling:** Scripted events cause furniture and rooms to shuffle when the player isn't looking, simulating the patient's confusion about their surroundings.
 
-### 🧩 Narrative Mechanics
+### ⿻ Narrative Mechanics
 The gameplay is designed as a metaphor for the disease:
 * **The Painting:** The central mechanic involves finding art supplies to complete a painting. As the disease progresses, finding these simple objects becomes a frantic puzzle.
 * **Sticky Notes:** The caregiver uses a sticky note system to label objects, a mechanic that directly impacts the patient's ability to recognize their environment in the final phase.
 
-### 🎬 Atmospheric Storytelling
+### ▷ Atmospheric Storytelling
 * **Guided by Light:** Players are subtly guided through the non-linear house layout using dynamic lighting cues rather than invasive UI elements.
 * **Inner Monologue:** A fully voiced internal dialogue system provides context to the patient's confusion and the caregiver's patience.
 
